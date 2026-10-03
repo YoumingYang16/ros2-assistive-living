@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "locations": {
+    "home": {"label": "起点", "aliases": ["基地", "充电点"], "x": 0.0, "y": 0.0, "yaw": 0.0},
+    "reception": {"label": "前台", "aliases": ["接待处"], "x": 2.0, "y": 0.0, "yaw": 0.0},
+    "meeting_room": {"label": "会议室", "aliases": ["会议间"], "x": 4.0, "y": 2.0, "yaw": 1.57},
+    "corridor": {"label": "走廊", "aliases": ["过道"], "x": 2.0, "y": 3.0, "yaw": 0.0},
+    "storage": {"label": "仓库", "aliases": ["储物间"], "x": -2.0, "y": 2.0, "yaw": 3.14}
+  },
+  "patrol_routes": {
+    "default": {"label": "默认巡逻路线", "waypoints": ["reception", "corridor", "meeting_room"], "dwell_seconds": 0.5}
+  },
+  "navigation_timeout": 60.0,
+  "inspection_timeout": 20.0,
+  "max_retries": 1,
+  "object_names": ["水杯", "人", "椅子", "桌子", "箱子", "背包", "灭火器"],
+  "ros": {
+    "perception_backend": "action",
+    "inspection_action": "/voice_patrol/inspect",
+    "skill_action": "/voice_patrol/execute_skill",
+    "capabilities_service": "/voice_patrol/get_capabilities",
+    "service_discovery_timeout": 5.0,
+    "pose_stale_seconds": 5.0,
+    "navigation_action": "/navigate_to_pose",
+    "map_frame": "map",
+    "pose_topic": "/amcl_pose",
+    "inspection_request_topic": "/voice_patrol/inspection/request",
+    "inspection_result_topic": "/voice_patrol/inspection/result",
+    "cancel_timeout": 2.0
+  },
+  "mock": {
+    "travel_seconds": 1.5,
+    "inspection_seconds": 0.6,
+    "objects": {"home": [], "reception": ["人", "桌子"], "meeting_room": ["水杯", "椅子", "桌子"], "corridor": ["灭火器"], "storage": ["箱子"]}
+  }
+}

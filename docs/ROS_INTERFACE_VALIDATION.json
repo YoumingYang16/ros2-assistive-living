@@ -1,0 +1,26 @@
+{
+  "scope": "Official rosidl_adapter pure-Python grammar and IDL generation; no native typesupport, colcon or DDS execution",
+  "interfaces": [
+    {
+      "source": "msg/Observation.msg",
+      "passed": true,
+      "idl_generated": true
+    },
+    {
+      "source": "action/ExecuteSkill.action",
+      "passed": true,
+      "idl_generated": true
+    },
+    {
+      "source": "action/Inspect.action",
+      "passed": true,
+      "idl_generated": true
+    },
+    {
+      "source": "srv/GetCapabilities.srv",
+      "passed": true,
+      "idl_generated": true
+    }
+  ],
+  "native_ros_verified": false
+}

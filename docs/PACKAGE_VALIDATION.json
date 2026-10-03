@@ -1,0 +1,53 @@
+{
+  "version": "7.0.0",
+  "wheel_name": "robot_voice_patrol-7.0.0-py3-none-any.whl",
+  "wheel_install": "passed",
+  "installed_import": {
+    "version": "7.0.0",
+    "locations": 5,
+    "web_resources": 14,
+    "skills": 14
+  },
+  "installed_conditional_task": "passed",
+  "installed_restart_idempotency": "passed",
+  "installed_scenario_cli": "passed",
+  "installed_workflow_examples": {
+    "examples": [
+      {
+        "example": "external_skill_interfaces.json",
+        "compiled_steps": 6,
+        "goal_outcome": "not_applicable",
+        "status": "passed"
+      },
+      {
+        "example": "parameterized_inspection.json",
+        "compiled_steps": 7,
+        "goal_outcome": "not_applicable",
+        "status": "passed"
+      },
+      {
+        "example": "three_location_search.json",
+        "compiled_steps": 8,
+        "goal_outcome": "achieved",
+        "status": "passed"
+      },
+      {
+        "example": "timeout_fallback.json",
+        "compiled_steps": 4,
+        "goal_outcome": "not_applicable",
+        "status": "passed"
+      }
+    ],
+    "parameterized_queue": "passed"
+  },
+  "installed_home_reminder": "passed",
+  "installed_home_restart_dedup": "passed",
+  "installed_home_device_readback": "passed",
+  "installed_unconfigured_gateway": "passed",
+  "installed_incident_and_handover": "passed",
+  "installed_opt_in_wellbeing": "passed",
+  "installed_weekly_calendar": "passed",
+  "installed_dialogue_update": "passed",
+  "installed_dialogue_confirmation": "passed",
+  "installed_history_pagination": "passed"
+}

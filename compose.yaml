@@ -1,0 +1,32 @@
+services:
+  assistant:
+    build: .
+    init: true
+    ports:
+      - "127.0.0.1:8773:8773"
+    environment:
+      ROS_DOMAIN_ID: "42"
+      ROS_AUTOMATIC_DISCOVERY_RANGE: SUBNET
+      VOICE_PATROL_CONTAINER_BIND: "1"
+      VOICE_PATROL_ALLOWED_HOSTS: "127.0.0.1:8773,localhost:8773"
+    volumes:
+      - mission_data:/data
+    shm_size: 256mb
+  fixture:
+    build: .
+    init: true
+    command: ["python3", "/ws/src/robot_voice_patrol/examples/ros_mock_endpoints.py"]
+    environment:
+      ROS_DOMAIN_ID: "42"
+      ROS_AUTOMATIC_DISCOVERY_RANGE: SUBNET
+    shm_size: 256mb
+    profiles: ["software-demo"]
+  tests:
+    build: .
+    init: true
+    command: ["bash", "/ws/src/robot_voice_patrol/scripts/ros_ci.sh"]
+    profiles: ["test"]
+    volumes:
+      - ./work/ros-test-results:/ws/test-results
+volumes:
+  mission_data:

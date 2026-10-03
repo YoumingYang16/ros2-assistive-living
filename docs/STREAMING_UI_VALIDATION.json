@@ -1,0 +1,12 @@
+{
+  "version": "7.0.0",
+  "generated_at": "2026-10-03T15:23:34.874Z",
+  "ok": true,
+  "scope": "Browser integration with explicit fake getUserMedia, AudioContext and ASR HTTP fixtures; no microphone, speaker or real ASR",
+  "checkpoints": [
+    "selecting local provider does not capture; explicit start streams ordered PCM; finish fills editable text without execution",
+    "segment correction revises complete transcript without posting a task",
+    "leaving task view immediately stops fake tracks and cancels server session",
+    "speech-output interrupt cancels local streaming to avoid recapturing output"
+  ]
+}

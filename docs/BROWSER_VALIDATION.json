@@ -1,0 +1,43 @@
+{
+  "version": "7.0.0",
+  "suites": [
+    {
+      "suite": "ui_smoke.cjs",
+      "passed": true,
+      "port": 8774
+    },
+    {
+      "suite": "ui_v3_smoke.cjs",
+      "passed": true,
+      "port": 8774
+    },
+    {
+      "suite": "ui_streaming_smoke.cjs",
+      "passed": true,
+      "port": 8774
+    },
+    {
+      "suite": "ui_v4_smoke.cjs",
+      "passed": true,
+      "port": 8774
+    },
+    {
+      "suite": "ui_assistive_smoke.cjs",
+      "passed": true,
+      "port": 8773
+    },
+    {
+      "suite": "ui_living_smoke.cjs",
+      "passed": true,
+      "port": 8773
+    },
+    {
+      "suite": "ui_daily_management_smoke.cjs",
+      "passed": true,
+      "port": 8773
+    }
+  ],
+  "hardware": false,
+  "microphone": false,
+  "external_messages": false
+}

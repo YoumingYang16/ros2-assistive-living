@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "name": "扩展技能接口演示（需要显式测试端点）",
+  "steps": [
+    {"type": "step", "kind": "navigate", "target": "meeting_room"},
+    {"type": "step", "kind": "turn", "params": {"angle_degrees": 90}},
+    {"type": "step", "kind": "capture", "target": "meeting_room", "params": {"camera": "front", "format": "jpeg"}},
+    {"type": "step", "kind": "follow", "params": {"subject": "operator", "duration_seconds": 0.2, "distance_meters": 1.5}},
+    {"type": "step", "kind": "dock", "target": "home"},
+    {"type": "step", "kind": "report", "params": {"title": "扩展技能接口记录"}}
+  ]
+}

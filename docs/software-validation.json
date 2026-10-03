@@ -1,0 +1,105 @@
+{
+  "version": "7.0.0",
+  "recorded_at": "2026-10-03T15:23:25.892440+00:00",
+  "python_version": "3.12.14",
+  "phases": [
+    {
+      "name": "python_syntax",
+      "status": "passed",
+      "file_count": 83
+    },
+    {
+      "name": "python_regressions",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 14.984,
+      "output": "----------------------------------------------------------------------\nRan 548 tests in 14.699s\n\nOK",
+      "test_count": 548
+    },
+    {
+      "name": "language_regressions",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.157,
+      "output": "{\n  \"suite\": \"curated_chinese_semantics_v3\",\n  \"model_calls\": 0,\n  \"generated_at\": \"2026-10-03T15:23:25.415638+00:00\",\n  \"corpus_sha256\": \"f74127e81a8f5e578fe6509e6c2e85c74b1045007d1bef7d9d6aa0797f694c2e\",\n  \"scope\": \"deterministic regression only; not real-world ASR or general language accuracy\",\n  \"total\": 179,\n  \"passed\": 179,\n  \"failed\": 0,\n  \"accuracy\": 1.0,\n  \"unintended_task_acceptances\": 0,\n  \"latency_ms\": {\n    \"p50\": 0.134,\n    \"p95\": 0.441\n  },\n  \"categories\": {\n    \"navigation\": {\n      \"passed\": 24,\n      \"total\": 24\n    },\n    \"sequence\": {\n      \"passed\": 10,\n      \"total\": 10\n    },\n    \"inspection\": {\n      \"passed\": 20,\n      \"total\": 20\n    },\n    \"patrol\": {\n      \"passed\": 10,\n      \"total\": 10\n    },\n    \"wait\": {\n      \"passed\": 10,\n      \"total\": 10\n    },\n    \"control\": {\n      \"passed\": 20,\n      \"total\": 20\n    },\n    \"answer\": {\n      \"passed\": 5,\n      \"total\": 5\n    },\n    \"clarification\": {\n      \"passed\": 8,\n      \"total\": 8\n    },\n    \"context\": {\n      \"passed\": 4,\n      \"total\": 4\n    },\n    \"revision\": {\n      \"passed\": 4,\n      \"total\": 4\n    },\n    \"conditional\": {\n      \"passed\": 6,\n      \"total\": 6\n    },\n    \"rejection\": {\n      \"passed\": 33,\n      \"total\": 33\n    },\n    \"multi_site\": {\n      \"passed\": 3,\n      \"total\": 3\n    },\n    \"compound\": {\n      \"passed\": 3,\n      \"total\": 3\n    },\n    \"repeat\": {\n      \"passed\": 2,\n      \"total\": 2\n    },\n    \"fallback\": {\n      \"passed\": 3,\n      \"total\": 3\n    },\n    \"skills\": {\n      \"passed\": 7,\n      \"total\": 7\n    },\n    \"v3_rejection\": {\n      \"passed\": 7,\n      \"total\": 7\n    }\n  }\n}"
+    },
+    {
+      "name": "browser_voice_state",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.125,
+      "output": "✔ construction never opens microphone or creates server session (0.5964ms)\n✔ PCM uploads serialize sequence, finish releases tracks and emits transcript only (0.8967ms)\n✔ cancel during permission wait stops late stream and does not reconnect (1.6583ms)\n✔ cancel discards late chunk responses and prevents finalization (0.9675ms)\n✔ bounded backlog cancels session instead of retaining unlimited PCM (0.5457ms)\n✔ correction stays in ASR session and cannot call task APIs (0.3664ms)\n✔ 48 kHz worklet resamples across render boundaries to signed little-endian 16 kHz (14.1157ms)\n✔ constructing voice controller never starts a microphone (0.661ms)\n✔ manual final text requires confirmation and interim never submits (2.7282ms)\n✔ handsfree does not submit duplicate final events (0.4778ms)\n✔ listening resumes during an unresolved request so stop can be prioritized (0.5369ms)\n✔ TTS aborts recording, discards echo, then resumes after cooldown (0.9657ms)\n✔ permission failure stops retries until another explicit start (0.2136ms)\n✔ no-speech retry backoff stops after three unsuccessful rounds (0.1381ms)\n✔ stopping immediately cancels a queued final callback (0.4542ms)\n✔ only complete standalone stop commands have priority (0.1284ms)\nℹ tests 16\nℹ suites 0\nℹ pass 16\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 75.9204"
+    },
+    {
+      "name": "javascript_syntax_app.js",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.031,
+      "output": ""
+    },
+    {
+      "name": "javascript_syntax_assistive.js",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.047,
+      "output": ""
+    },
+    {
+      "name": "javascript_syntax_daily-management.js",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.031,
+      "output": ""
+    },
+    {
+      "name": "javascript_syntax_living.js",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.031,
+      "output": ""
+    },
+    {
+      "name": "javascript_syntax_pcm-worklet.js",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.047,
+      "output": ""
+    },
+    {
+      "name": "javascript_syntax_scenarios.js",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.031,
+      "output": ""
+    },
+    {
+      "name": "javascript_syntax_streaming-voice.js",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.047,
+      "output": ""
+    },
+    {
+      "name": "javascript_syntax_voice.js",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.031,
+      "output": ""
+    },
+    {
+      "name": "javascript_syntax_workspace.js",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.047,
+      "output": ""
+    }
+  ],
+  "all_available_checks_passed": true,
+  "external_checks_not_covered": [
+    "real ROS DDS/colcon/container",
+    "actual model inference",
+    "real microphone",
+    "browser end-to-end",
+    "physical hardware"
+  ]
+}

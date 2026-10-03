@@ -1,0 +1,7 @@
+---
+# Only advertise skills this server implements. Supported V3 names are
+# capture, dock, follow, turn. Consumers reject unknown protocol versions.
+string protocol_version
+string[] skills
+bool simulated
+string provider

@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "scope": "local_mock_and_fake_speech_only",
+  "checkpoints": [
+    "weekly calendar creation with cutoff; title-only editing preserves exact due time and cadence",
+    "concurrent edit conflict remains visible, reload recovers, weekly reminder can become one-off",
+    "editing from history refreshes the open detail and its revision after saving",
+    "complete record history paging with committed filters, kind/state/text filters, details and explicit local download",
+    "main console preview binds the record; stale preview and stale reminder buttons cannot affect a replacement or revised record",
+    "same session across care and voice console; fake interim speech does not mutate; spoken ordinal selects only one reminder; wellbeing and supplies finish",
+    "390px layout has no horizontal overflow or browser errors"
+  ],
+  "page_errors": []
+}

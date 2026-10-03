@@ -1,0 +1,15 @@
+{
+  "version": "7.0.0",
+  "generated_at": "2026-10-03T15:23:37.506Z",
+  "ok": true,
+  "checkpoints": [
+    "six scenario outcomes shown with production engine results; live history unchanged",
+    "preflight is read-only, current editor draft imports, comparison report exports",
+    "queued job editor persists priority and recurrence changes to audited backend",
+    "new scenario and queue edit views fit 390px without horizontal page overflow",
+    "no browser JavaScript exceptions"
+  ],
+  "microphone": false,
+  "speaker": false,
+  "hardware": false
+}

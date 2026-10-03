@@ -1,0 +1,30 @@
+# Goal: action transport owns the lifecycle; request_id provides trace correlation.
+string<=64 request_id
+string<=128 target
+string<=128 object_name
+float32 timeout_seconds
+---
+uint8 FOUND=1
+uint8 NOT_FOUND=2
+uint8 INCONCLUSIVE=3
+uint8 OBSERVED=4
+uint16 NONE=0
+uint16 INVALID_REQUEST=1
+uint16 SENSOR_UNAVAILABLE=2
+uint16 OBSERVATION_TIMEOUT=3
+uint16 INTERNAL_ERROR=4
+string<=64 request_id
+string<=128 target
+string<=128 object_name
+uint8 outcome
+uint16 error_code
+string<=2048 error_message
+# Unix/UTC observation time, not ROS simulation time.
+builtin_interfaces/Time observed_at
+string<=2048 summary
+voice_patrol_interfaces/Observation[<=100] observations
+bool simulated
+---
+string<=64 phase
+float32 progress
+string<=2048 message

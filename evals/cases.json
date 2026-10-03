@@ -1,0 +1,2000 @@
+[
+  {
+    "id": "nl-001",
+    "category": "navigation",
+    "text": "去会议室",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-002",
+    "category": "navigation",
+    "text": "请前往前台",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-003",
+    "category": "navigation",
+    "text": "麻烦帮我去仓库吧。",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-004",
+    "category": "navigation",
+    "text": "到走廊",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "corridor"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-005",
+    "category": "navigation",
+    "text": "导航到起点",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "home"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-006",
+    "category": "navigation",
+    "text": "移动到接待处",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-007",
+    "category": "navigation",
+    "text": "去储物间",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-008",
+    "category": "navigation",
+    "text": "去会议间",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-009",
+    "category": "navigation",
+    "text": "去过道",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "corridor"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-010",
+    "category": "navigation",
+    "text": "带我去会议室",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-011",
+    "category": "navigation",
+    "text": "导航至前台",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-012",
+    "category": "navigation",
+    "text": "移动至仓库",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-013",
+    "category": "navigation",
+    "text": "走到走廊",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "corridor"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-014",
+    "category": "navigation",
+    "text": "到会议室去",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-015",
+    "category": "navigation",
+    "text": "去仓库一趟",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-016",
+    "category": "navigation",
+    "text": "去前台一下",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-017",
+    "category": "navigation",
+    "text": "回家",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "home"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-018",
+    "category": "navigation",
+    "text": "回到起点",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "home"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-019",
+    "category": "navigation",
+    "text": "返回基地",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "home"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-020",
+    "category": "navigation",
+    "text": "回充电点",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "home"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-021",
+    "category": "navigation",
+    "text": "去meeting_room",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-022",
+    "category": "navigation",
+    "text": "请你去前台",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-023",
+    "category": "navigation",
+    "text": "帮忙去仓库",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-024",
+    "category": "navigation",
+    "text": "去 会议室！",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-025",
+    "category": "sequence",
+    "text": "去会议室然后返回起点",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room",
+        "home"
+      ]
+    }
+  },
+  {
+    "id": "nl-026",
+    "category": "sequence",
+    "text": "先去前台，接着去仓库，最后回基地",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception",
+        "storage",
+        "home"
+      ]
+    }
+  },
+  {
+    "id": "nl-027",
+    "category": "sequence",
+    "text": "去走廊；去储物间",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "corridor",
+        "storage"
+      ]
+    }
+  },
+  {
+    "id": "nl-028",
+    "category": "sequence",
+    "text": "去会议室然后去前台，最后返回起点",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room",
+        "reception",
+        "home"
+      ]
+    }
+  },
+  {
+    "id": "nl-029",
+    "category": "sequence",
+    "text": "去前台并去会议室",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception",
+        "meeting_room"
+      ]
+    }
+  },
+  {
+    "id": "nl-030",
+    "category": "sequence",
+    "text": "去仓库之后去过道",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage",
+        "corridor"
+      ]
+    }
+  },
+  {
+    "id": "nl-031",
+    "category": "sequence",
+    "text": "去前台，等待2秒，去会议室",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception",
+        "meeting_room"
+      ]
+    }
+  },
+  {
+    "id": "nl-032",
+    "category": "sequence",
+    "text": "去基地然后去会议室",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "home",
+        "meeting_room"
+      ]
+    }
+  },
+  {
+    "id": "nl-033",
+    "category": "sequence",
+    "text": "去会议室然后返回仓库",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room",
+        "storage"
+      ]
+    }
+  },
+  {
+    "id": "nl-034",
+    "category": "sequence",
+    "text": "去前台并且去走廊然后返回充电点",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception",
+        "corridor",
+        "home"
+      ]
+    }
+  },
+  {
+    "id": "nl-035",
+    "category": "inspection",
+    "text": "去会议室看看有没有水杯",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "objects": [
+        "水杯"
+      ]
+    }
+  },
+  {
+    "id": "nl-036",
+    "category": "inspection",
+    "text": "去仓库检查有没有箱子然后返回起点",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage",
+        "home"
+      ],
+      "objects": [
+        "箱子"
+      ]
+    }
+  },
+  {
+    "id": "nl-037",
+    "category": "inspection",
+    "text": "在前台检查有没有人员",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception"
+      ],
+      "objects": [
+        "人"
+      ]
+    }
+  },
+  {
+    "id": "nl-038",
+    "category": "inspection",
+    "text": "检查走廊有没有灭火器",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "corridor"
+      ],
+      "objects": [
+        "灭火器"
+      ]
+    }
+  },
+  {
+    "id": "nl-039",
+    "category": "inspection",
+    "text": "去会议间找杯子",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "objects": [
+        "水杯"
+      ]
+    }
+  },
+  {
+    "id": "nl-040",
+    "category": "inspection",
+    "text": "去前台寻找行人",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception"
+      ],
+      "objects": [
+        "人"
+      ]
+    }
+  },
+  {
+    "id": "nl-041",
+    "category": "inspection",
+    "text": "去仓库查找背包",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "objects": [
+        "背包"
+      ]
+    }
+  },
+  {
+    "id": "nl-042",
+    "category": "inspection",
+    "text": "查找水杯在会议室",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "objects": [
+        "水杯"
+      ]
+    }
+  },
+  {
+    "id": "nl-043",
+    "category": "inspection",
+    "text": "找箱子去仓库",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "objects": [
+        "箱子"
+      ]
+    }
+  },
+  {
+    "id": "nl-044",
+    "category": "inspection",
+    "text": "去仓库搜索箱子",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "objects": [
+        "箱子"
+      ]
+    }
+  },
+  {
+    "id": "nl-045",
+    "category": "inspection",
+    "text": "去会议室找一找椅子",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "objects": [
+        "椅子"
+      ]
+    }
+  },
+  {
+    "id": "nl-046",
+    "category": "inspection",
+    "text": "去前台寻找一下桌子",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception"
+      ],
+      "objects": [
+        "桌子"
+      ]
+    }
+  },
+  {
+    "id": "nl-047",
+    "category": "inspection",
+    "text": "去仓库看一看是否存在箱子",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "objects": [
+        "箱子"
+      ]
+    }
+  },
+  {
+    "id": "nl-048",
+    "category": "inspection",
+    "text": "去会议室查看一下有没有发现水杯",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "objects": [
+        "水杯"
+      ]
+    }
+  },
+  {
+    "id": "nl-049",
+    "category": "inspection",
+    "text": "去前台检查一下有无人",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception"
+      ],
+      "objects": [
+        "人"
+      ]
+    }
+  },
+  {
+    "id": "nl-050",
+    "category": "inspection",
+    "text": "去仓库，等三秒，检查有没有箱子",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "objects": [
+        "箱子"
+      ]
+    }
+  },
+  {
+    "id": "nl-051",
+    "category": "inspection",
+    "text": "去走廊检测是否有灭火器",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "corridor"
+      ],
+      "objects": [
+        "灭火器"
+      ]
+    }
+  },
+  {
+    "id": "nl-052",
+    "category": "inspection",
+    "text": "去会议室找水杯然后汇报结果",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "objects": [
+        "水杯"
+      ]
+    }
+  },
+  {
+    "id": "nl-053",
+    "category": "inspection",
+    "text": "检查会议室",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "objects": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "nl-054",
+    "category": "inspection",
+    "text": "去仓库看看",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "objects": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "nl-055",
+    "category": "patrol",
+    "text": "巡逻",
+    "expected": {
+      "kind": "task",
+      "step_count": 9
+    }
+  },
+  {
+    "id": "nl-056",
+    "category": "patrol",
+    "text": "开始巡逻两圈",
+    "expected": {
+      "kind": "task",
+      "step_count": 18
+    }
+  },
+  {
+    "id": "nl-057",
+    "category": "patrol",
+    "text": "巡检三圈",
+    "expected": {
+      "kind": "task",
+      "step_count": 27
+    }
+  },
+  {
+    "id": "nl-058",
+    "category": "patrol",
+    "text": "巡护1圈",
+    "expected": {
+      "kind": "task",
+      "step_count": 9
+    }
+  },
+  {
+    "id": "nl-059",
+    "category": "patrol",
+    "text": "巡视两圈",
+    "expected": {
+      "kind": "task",
+      "step_count": 18
+    }
+  },
+  {
+    "id": "nl-060",
+    "category": "patrol",
+    "text": "开始巡查一圈",
+    "expected": {
+      "kind": "task",
+      "step_count": 9
+    }
+  },
+  {
+    "id": "nl-061",
+    "category": "patrol",
+    "text": "在会议室和走廊巡逻两圈",
+    "expected": {
+      "kind": "task",
+      "step_count": 12
+    }
+  },
+  {
+    "id": "nl-062",
+    "category": "patrol",
+    "text": "巡逻前台、仓库一圈",
+    "expected": {
+      "kind": "task",
+      "step_count": 6
+    }
+  },
+  {
+    "id": "nl-063",
+    "category": "patrol",
+    "text": "沿默认路线巡逻一圈",
+    "expected": {
+      "kind": "task",
+      "step_count": 9
+    }
+  },
+  {
+    "id": "nl-064",
+    "category": "patrol",
+    "text": "巡检走廊及会议室2圈",
+    "expected": {
+      "kind": "task",
+      "step_count": 12
+    }
+  },
+  {
+    "id": "nl-065",
+    "category": "wait",
+    "text": "等待五秒",
+    "expected": {
+      "kind": "task",
+      "seconds": [
+        5
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-066",
+    "category": "wait",
+    "text": "等两分钟",
+    "expected": {
+      "kind": "task",
+      "seconds": [
+        120
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-067",
+    "category": "wait",
+    "text": "等待1.5秒",
+    "expected": {
+      "kind": "task",
+      "seconds": [
+        1.5
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-068",
+    "category": "wait",
+    "text": "停留十秒",
+    "expected": {
+      "kind": "task",
+      "seconds": [
+        10
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-069",
+    "category": "wait",
+    "text": "等候三分钟",
+    "expected": {
+      "kind": "task",
+      "seconds": [
+        180
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-070",
+    "category": "wait",
+    "text": "等待一百零五秒",
+    "expected": {
+      "kind": "task",
+      "seconds": [
+        105
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-071",
+    "category": "wait",
+    "text": "等十一秒钟",
+    "expected": {
+      "kind": "task",
+      "seconds": [
+        11
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-072",
+    "category": "wait",
+    "text": "等待三百秒",
+    "expected": {
+      "kind": "task",
+      "seconds": [
+        300
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-073",
+    "category": "wait",
+    "text": "等待3600秒",
+    "expected": {
+      "kind": "task",
+      "seconds": [
+        3600
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-074",
+    "category": "wait",
+    "text": "等待六十分钟",
+    "expected": {
+      "kind": "task",
+      "seconds": [
+        3600
+      ],
+      "step_count": 1
+    }
+  },
+  {
+    "id": "nl-075",
+    "category": "control",
+    "text": "停止",
+    "expected": {
+      "kind": "stop"
+    }
+  },
+  {
+    "id": "nl-076",
+    "category": "control",
+    "text": "立即停止",
+    "expected": {
+      "kind": "stop"
+    }
+  },
+  {
+    "id": "nl-077",
+    "category": "control",
+    "text": "急停",
+    "expected": {
+      "kind": "stop"
+    }
+  },
+  {
+    "id": "nl-078",
+    "category": "control",
+    "text": "取消当前任务",
+    "expected": {
+      "kind": "stop"
+    }
+  },
+  {
+    "id": "nl-079",
+    "category": "control",
+    "text": "不要动",
+    "expected": {
+      "kind": "stop"
+    }
+  },
+  {
+    "id": "nl-080",
+    "category": "control",
+    "text": "别动",
+    "expected": {
+      "kind": "stop"
+    }
+  },
+  {
+    "id": "nl-081",
+    "category": "control",
+    "text": "停一下",
+    "expected": {
+      "kind": "stop"
+    }
+  },
+  {
+    "id": "nl-082",
+    "category": "control",
+    "text": "暂停",
+    "expected": {
+      "kind": "pause"
+    }
+  },
+  {
+    "id": "nl-083",
+    "category": "control",
+    "text": "暂停一下",
+    "expected": {
+      "kind": "pause"
+    }
+  },
+  {
+    "id": "nl-084",
+    "category": "control",
+    "text": "先暂停",
+    "expected": {
+      "kind": "pause"
+    }
+  },
+  {
+    "id": "nl-085",
+    "category": "control",
+    "text": "暂时停一下",
+    "expected": {
+      "kind": "pause"
+    }
+  },
+  {
+    "id": "nl-086",
+    "category": "control",
+    "text": "继续",
+    "expected": {
+      "kind": "resume"
+    }
+  },
+  {
+    "id": "nl-087",
+    "category": "control",
+    "text": "继续执行",
+    "expected": {
+      "kind": "resume"
+    }
+  },
+  {
+    "id": "nl-088",
+    "category": "control",
+    "text": "接着执行",
+    "expected": {
+      "kind": "resume"
+    }
+  },
+  {
+    "id": "nl-089",
+    "category": "control",
+    "text": "恢复执行",
+    "expected": {
+      "kind": "resume"
+    }
+  },
+  {
+    "id": "nl-090",
+    "category": "control",
+    "text": "查询状态",
+    "expected": {
+      "kind": "status"
+    }
+  },
+  {
+    "id": "nl-091",
+    "category": "control",
+    "text": "现在什么状态",
+    "expected": {
+      "kind": "status"
+    }
+  },
+  {
+    "id": "nl-092",
+    "category": "control",
+    "text": "进度怎么样",
+    "expected": {
+      "kind": "status"
+    }
+  },
+  {
+    "id": "nl-093",
+    "category": "control",
+    "text": "执行到哪了",
+    "expected": {
+      "kind": "status"
+    }
+  },
+  {
+    "id": "nl-094",
+    "category": "control",
+    "text": "报告状态",
+    "expected": {
+      "kind": "status"
+    }
+  },
+  {
+    "id": "nl-095",
+    "category": "answer",
+    "text": "帮助",
+    "expected": {
+      "kind": "answer"
+    }
+  },
+  {
+    "id": "nl-096",
+    "category": "answer",
+    "text": "你能做什么",
+    "expected": {
+      "kind": "answer"
+    }
+  },
+  {
+    "id": "nl-097",
+    "category": "answer",
+    "text": "有哪些功能",
+    "expected": {
+      "kind": "answer"
+    }
+  },
+  {
+    "id": "nl-098",
+    "category": "answer",
+    "text": "上次去了哪里",
+    "expected": {
+      "kind": "answer"
+    }
+  },
+  {
+    "id": "nl-099",
+    "category": "answer",
+    "text": "上次找的是什么",
+    "expected": {
+      "kind": "answer"
+    }
+  },
+  {
+    "id": "nl-100",
+    "category": "clarification",
+    "text": "去",
+    "expected": {
+      "kind": "clarify",
+      "options": [
+        "起点",
+        "前台",
+        "会议室",
+        "走廊",
+        "仓库"
+      ]
+    }
+  },
+  {
+    "id": "nl-101",
+    "category": "clarification",
+    "text": "去会议",
+    "expected": {
+      "kind": "clarify",
+      "options": [
+        "会议室"
+      ]
+    }
+  },
+  {
+    "id": "nl-102",
+    "category": "clarification",
+    "text": "去会议室还是仓库",
+    "expected": {
+      "kind": "clarify",
+      "options": [
+        "会议室",
+        "仓库"
+      ]
+    }
+  },
+  {
+    "id": "nl-103",
+    "category": "clarification",
+    "text": "去前台或者走廊",
+    "expected": {
+      "kind": "clarify",
+      "options": [
+        "前台",
+        "走廊"
+      ]
+    }
+  },
+  {
+    "id": "nl-104",
+    "category": "clarification",
+    "text": "去那里",
+    "expected": {
+      "kind": "clarify",
+      "options": [
+        "起点",
+        "前台",
+        "会议室",
+        "走廊",
+        "仓库"
+      ]
+    }
+  },
+  {
+    "id": "nl-105",
+    "category": "clarification",
+    "text": "找水杯",
+    "expected": {
+      "kind": "clarify"
+    }
+  },
+  {
+    "id": "nl-106",
+    "category": "clarification",
+    "text": "去仓库找一下",
+    "expected": {
+      "kind": "clarify"
+    }
+  },
+  {
+    "id": "nl-107",
+    "category": "clarification",
+    "text": "去会议室找它",
+    "expected": {
+      "kind": "clarify"
+    }
+  },
+  {
+    "id": "nl-108",
+    "category": "context",
+    "text": "仓库",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "objects": [
+        "水杯"
+      ]
+    },
+    "prepare": [
+      "找水杯"
+    ]
+  },
+  {
+    "id": "nl-109",
+    "category": "context",
+    "text": "箱子",
+    "expected": {
+      "kind": "task",
+      "objects": [
+        "箱子"
+      ]
+    },
+    "prepare": [
+      "去仓库找一下"
+    ]
+  },
+  {
+    "id": "nl-110",
+    "category": "context",
+    "text": "去那里找它",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room"
+      ],
+      "objects": [
+        "水杯"
+      ]
+    },
+    "prepare": [
+      "去会议室找水杯然后返回起点"
+    ]
+  },
+  {
+    "id": "nl-111",
+    "category": "context",
+    "text": "去上一个地点",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception"
+      ]
+    },
+    "prepare": [
+      "去前台",
+      "去仓库"
+    ]
+  },
+  {
+    "id": "nl-112",
+    "category": "revision",
+    "text": "改去仓库",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage",
+        "home"
+      ],
+      "requires_confirmation": true
+    },
+    "prepare": [
+      "去会议室找水杯然后返回起点"
+    ]
+  },
+  {
+    "id": "nl-113",
+    "category": "revision",
+    "text": "把会议室改成仓库",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage",
+        "reception"
+      ],
+      "requires_confirmation": true
+    },
+    "prepare": [
+      "去会议室然后去前台"
+    ]
+  },
+  {
+    "id": "nl-114",
+    "category": "revision",
+    "text": "确认执行",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "storage"
+      ],
+      "requires_confirmation": false
+    },
+    "prepare": [
+      "去会议室",
+      "改去仓库"
+    ]
+  },
+  {
+    "id": "nl-115",
+    "category": "revision",
+    "text": "改去前台",
+    "expected": {
+      "kind": "reject"
+    },
+    "prepare": [
+      "去会议室"
+    ],
+    "context_after_prepare": {
+      "active_mission": true
+    }
+  },
+  {
+    "id": "nl-116",
+    "category": "conditional",
+    "text": "先去会议室找水杯，没找到就去仓库，找到后告诉我并返回起点",
+    "expected": {
+      "kind": "task",
+      "condition_outcomes": [
+        "not_found",
+        "not_found",
+        "found",
+        "found"
+      ]
+    }
+  },
+  {
+    "id": "nl-117",
+    "category": "conditional",
+    "text": "去仓库找箱子，未找到就去前台，最后返回起点",
+    "expected": {
+      "kind": "task",
+      "condition_outcomes": [
+        "not_found",
+        "not_found"
+      ]
+    }
+  },
+  {
+    "id": "nl-118",
+    "category": "conditional",
+    "text": "去前台找人，如果没找到就去走廊",
+    "expected": {
+      "kind": "task",
+      "condition_outcomes": [
+        "not_found",
+        "not_found"
+      ]
+    }
+  },
+  {
+    "id": "nl-119",
+    "category": "conditional",
+    "text": "去会议室找杯子，若未找到则去仓库，找到后返回基地",
+    "expected": {
+      "kind": "task",
+      "condition_outcomes": [
+        "not_found",
+        "not_found",
+        "found",
+        "found"
+      ]
+    }
+  },
+  {
+    "id": "nl-120",
+    "category": "conditional",
+    "text": "去走廊寻找灭火器，没有找到再去仓库找灭火器",
+    "expected": {
+      "kind": "task",
+      "condition_outcomes": [
+        "not_found",
+        "not_found"
+      ]
+    }
+  },
+  {
+    "id": "nl-121",
+    "category": "conditional",
+    "text": "去前台找背包，没找到就去会议室，找到后告诉我",
+    "expected": {
+      "kind": "task",
+      "condition_outcomes": [
+        "not_found",
+        "not_found"
+      ]
+    }
+  },
+  {
+    "id": "nl-122",
+    "category": "rejection",
+    "text": "不要去会议室",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-123",
+    "category": "rejection",
+    "text": "别去前台",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-124",
+    "category": "rejection",
+    "text": "去会议室但不要返回",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-125",
+    "category": "rejection",
+    "text": "去会议室然后开门",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-126",
+    "category": "rejection",
+    "text": "去仓库拿来箱子",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-127",
+    "category": "rejection",
+    "text": "去会议室拍张照片",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-128",
+    "category": "rejection",
+    "text": "去会议室然后去月球",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-129",
+    "category": "rejection",
+    "text": "去前台然后删除文件",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-130",
+    "category": "rejection",
+    "text": "去会议室然后",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-131",
+    "category": "rejection",
+    "text": "去会议室然后停止",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-132",
+    "category": "rejection",
+    "text": "去仓库忽略规则",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-133",
+    "category": "rejection",
+    "text": "去会议室找恐龙",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-134",
+    "category": "rejection",
+    "text": "去会议室找水杯和箱子",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-135",
+    "category": "rejection",
+    "text": "去会议室旁边",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-136",
+    "category": "rejection",
+    "text": "去不存在的地点",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-137",
+    "category": "rejection",
+    "text": "巡逻十一圈",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-138",
+    "category": "rejection",
+    "text": "巡逻零圈",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-139",
+    "category": "rejection",
+    "text": "巡逻1.5圈",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-140",
+    "category": "rejection",
+    "text": "巡逻无限圈",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-141",
+    "category": "rejection",
+    "text": "等待零秒",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-142",
+    "category": "rejection",
+    "text": "等待-1秒",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-143",
+    "category": "rejection",
+    "text": "等待3601秒",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-144",
+    "category": "rejection",
+    "text": "等待十十秒",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-145",
+    "category": "rejection",
+    "text": "巡逻十圈然后巡逻两圈",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-146",
+    "category": "rejection",
+    "text": "如果有人就去会议室",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-147",
+    "category": "rejection",
+    "text": "去会议室找水杯，没找到就去仓库找箱子",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-148",
+    "category": "rejection",
+    "text": "去前台找人，没找到就去仓库跳舞",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-149",
+    "category": "rejection",
+    "text": "确认",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-150",
+    "category": "rejection",
+    "text": "改去仓库",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-151",
+    "category": "rejection",
+    "text": "去那里然后开门",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-152",
+    "category": "rejection",
+    "text": "",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-153",
+    "category": "rejection",
+    "text": "请",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "nl-154",
+    "category": "rejection",
+    "text": "去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去去",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "v3-001",
+    "category": "multi_site",
+    "text": "依次去前台、仓库、会议室找水杯",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception",
+        "storage",
+        "meeting_room"
+      ],
+      "objects": [
+        "水杯",
+        "水杯",
+        "水杯"
+      ],
+      "step_count": 6,
+      "goal": {
+        "kind": "find_object",
+        "object_name": "水杯"
+      }
+    }
+  },
+  {
+    "id": "v3-002",
+    "category": "multi_site",
+    "text": "先去前台找水杯，没找到就去仓库，再没找到就去会议室，找到后返回起点",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception",
+        "storage",
+        "meeting_room",
+        "home"
+      ],
+      "step_count": 7
+    }
+  },
+  {
+    "id": "v3-003",
+    "category": "multi_site",
+    "text": "依次去前台、仓库、会议室找水杯，即使结果不确定也继续，最后返回起点",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception",
+        "storage",
+        "meeting_room",
+        "home"
+      ],
+      "step_count": 7,
+      "condition_outcomes": [
+        "not_found",
+        "inconclusive",
+        "not_found",
+        "inconclusive",
+        "not_found",
+        "inconclusive",
+        "not_found",
+        "inconclusive",
+        "not_found",
+        "inconclusive",
+        "not_found",
+        "inconclusive"
+      ]
+    }
+  },
+  {
+    "id": "v3-004",
+    "category": "compound",
+    "text": "去会议室找水杯然后去仓库找水杯，如果两处都找到就返回起点",
+    "expected": {
+      "kind": "task",
+      "conditions": [
+        {
+          "all": [
+            {
+              "step_id": "look1",
+              "outcome": "found"
+            },
+            {
+              "step_id": "look2",
+              "outcome": "found"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "v3-005",
+    "category": "compound",
+    "text": "去会议室找水杯然后去仓库找水杯，如果任意一处找到就返回起点",
+    "expected": {
+      "kind": "task",
+      "conditions": [
+        {
+          "any": [
+            {
+              "step_id": "look1",
+              "outcome": "found"
+            },
+            {
+              "step_id": "look2",
+              "outcome": "found"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "v3-006",
+    "category": "compound",
+    "text": "去会议室找水杯然后去仓库找箱子，如果两处都没找到就返回起点",
+    "expected": {
+      "kind": "task",
+      "goal": null,
+      "condition_outcomes": [
+        "not_found",
+        "not_found"
+      ]
+    }
+  },
+  {
+    "id": "v3-007",
+    "category": "repeat",
+    "text": "重复三次：去前台然后返回起点",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "reception",
+        "home",
+        "reception",
+        "home",
+        "reception",
+        "home"
+      ],
+      "step_count": 6
+    }
+  },
+  {
+    "id": "v3-008",
+    "category": "repeat",
+    "text": "循环两次：去会议室找水杯",
+    "expected": {
+      "kind": "task",
+      "objects": [
+        "水杯",
+        "水杯"
+      ],
+      "step_count": 4,
+      "goal": {
+        "kind": "find_object",
+        "object_name": "水杯"
+      }
+    }
+  },
+  {
+    "id": "v3-009",
+    "category": "fallback",
+    "text": "去会议室，如果失败或超时就去前台",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room",
+        "reception"
+      ],
+      "on_failure": [
+        "continue",
+        "abort"
+      ],
+      "condition_outcomes": [
+        "failed",
+        "timed_out"
+      ]
+    }
+  },
+  {
+    "id": "v3-010",
+    "category": "fallback",
+    "text": "去会议室，如果超时就去前台，然后返回起点",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room",
+        "reception",
+        "home"
+      ],
+      "condition_outcomes": [
+        "timed_out"
+      ]
+    }
+  },
+  {
+    "id": "v3-011",
+    "category": "fallback",
+    "text": "去会议室，如果失败就去仓库",
+    "expected": {
+      "kind": "task",
+      "targets": [
+        "meeting_room",
+        "storage"
+      ],
+      "condition_outcomes": [
+        "failed"
+      ]
+    }
+  },
+  {
+    "id": "v3-012",
+    "category": "skills",
+    "text": "播报：请保持通道畅通",
+    "expected": {
+      "kind": "task",
+      "kinds": [
+        "speak"
+      ]
+    }
+  },
+  {
+    "id": "v3-013",
+    "category": "skills",
+    "text": "生成报告",
+    "expected": {
+      "kind": "task",
+      "kinds": [
+        "report"
+      ]
+    }
+  },
+  {
+    "id": "v3-014",
+    "category": "skills",
+    "text": "等待定位有效",
+    "expected": {
+      "kind": "task",
+      "kinds": [
+        "wait_state"
+      ]
+    }
+  },
+  {
+    "id": "v3-015",
+    "category": "skills",
+    "text": "前置相机拍照",
+    "expected": {
+      "kind": "task",
+      "kinds": [
+        "capture"
+      ]
+    }
+  },
+  {
+    "id": "v3-016",
+    "category": "skills",
+    "text": "对接充电桩",
+    "expected": {
+      "kind": "task",
+      "kinds": [
+        "dock"
+      ]
+    }
+  },
+  {
+    "id": "v3-017",
+    "category": "skills",
+    "text": "原地右转90度",
+    "expected": {
+      "kind": "task",
+      "kinds": [
+        "turn"
+      ]
+    }
+  },
+  {
+    "id": "v3-018",
+    "category": "skills",
+    "text": "跟随小王持续五秒",
+    "expected": {
+      "kind": "task",
+      "kinds": [
+        "follow"
+      ]
+    }
+  },
+  {
+    "id": "v3-019",
+    "category": "v3_rejection",
+    "text": "重复十一次：去前台",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "v3-020",
+    "category": "v3_rejection",
+    "text": "循环1.5次：去前台",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "v3-021",
+    "category": "v3_rejection",
+    "text": "依次去前台、仓库、月球找水杯",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "v3-022",
+    "category": "v3_rejection",
+    "text": "依次去前台、前台、仓库找水杯",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "v3-023",
+    "category": "v3_rejection",
+    "text": "依次去前台、仓库、会议室找水杯然后开门",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "v3-024",
+    "category": "v3_rejection",
+    "text": "左转361度",
+    "expected": {
+      "kind": "reject"
+    }
+  },
+  {
+    "id": "v3-025",
+    "category": "v3_rejection",
+    "text": "跟随小王持续601秒",
+    "expected": {
+      "kind": "reject"
+    }
+  }
+]

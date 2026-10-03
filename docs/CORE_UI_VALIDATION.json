@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "checkpoints": [
+    "page load does not activate microphone",
+    "conditional plan, observed branch, skipped steps and report",
+    "persistent history details and JSON export",
+    "clarification does not move; selecting a destination executes the resolved task",
+    "invalid JSON rejected, configuration saved and restored",
+    "runtime diagnostics and metrics",
+    "mocked browser interim/final transcript needs manual send",
+    "WAV endpoint result is displayed without execution",
+    "uncertain HTTP retry preserves request_id",
+    "explicit handsfree starts a task; standalone voice stop uses control API",
+    "four mobile views have no overflow; no JavaScript errors"
+  ],
+  "screenshot_directory": "docs/screenshots"
+}

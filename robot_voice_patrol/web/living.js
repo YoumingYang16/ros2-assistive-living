@@ -1,0 +1,35 @@
+"use strict";
+(() => {
+  const U=window.PatrolUI, A=window.AssistiveUI, $=id=>document.getElementById(id);
+  const E=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
+  const lockNote=E("p");lockNote.id="living-hardware-lock";lockNote.className="care-message error";lockNote.hidden=true;lockNote.setAttribute("role","alert");$("care-device-form").before(lockNote);
+  function renderHardware(s){const lock=s?.hardware_interlock;const blocked=["pending","unknown"].includes(lock?.status)||s?.robot?.hardware_uncertain===true;lockNote.hidden=!blocked;lockNote.textContent=blocked?(lock?.status==="pending"?"机械动作等待确认，暂不接受新的设备任务。":"机械状态尚未核实，设备操作和导航已锁止。需由设备接入人员核实；重启或网页确认不能解除。")+" 生活提醒和人工协助记录仍可使用。":"";for(const id of ["care-device-form","care-delivery-form"])$(id).querySelector('button[type="submit"]').disabled=blocked;}
+  window.addEventListener("patrol:state",e=>renderHardware(e.detail));renderHardware(U.getSnapshot());
+  const panel=E("section");panel.className="card";
+  panel.innerHTML=`<h2>支持中断与设备维护</h2><p class="help-text">以下是本人的报告与记录，没有自动判断停电、跌倒或设备安全。</p>
+    <form id="living-incident-form" class="care-form"><label>发生了什么<select id="living-incident-category"><option value="power_failure">停电</option><option value="network_failure">网络中断</option><option value="device_failure">辅助设备故障</option><option value="blocked_route">通道或出口受阻</option><option value="caregiver_absent">照护人员未到</option><option value="extreme_weather">恶劣天气影响</option><option value="lost_communication">呼叫设备不可用</option></select></label><label>补充情况<input id="living-incident-detail" maxlength="500"></label><button type="submit">报告并建立协助记录</button></form><div id="living-incidents" class="care-records"></div>
+    <h3>辅助设备台账</h3><form id="living-equipment-form" class="care-form"><label>设备名称<input id="living-equipment-title" required maxlength="100" placeholder="如：轮椅、呼叫器"></label><label>设备类型<select id="living-equipment-kind"><option value="mobility_aid">移动辅助器具</option><option value="communication">通信设备</option><option value="home_device">家用设备</option><option value="other">其他</option></select></label><label>下次检查时间（选填）<input id="living-equipment-date" type="datetime-local"></label><button type="submit">登记并按需提醒</button></form><div id="living-equipment" class="care-records"></div>`;
+  const wellbeing=E("section");wellbeing.className="card";
+  wellbeing.innerHTML=`<h2>本人自选的定时确认</h2><p class="help-text">只有你主动开启才会计时。逾期会建立待人工核实的本机记录，不推断危险，也不会自动联系他人。</p><form id="living-wellbeing-form" class="care-form"><label>多久后确认（分钟）<input id="living-wellbeing-minutes" type="number" min="1" max="1440" value="30" required></label><button type="submit">开始本次等待</button></form><div id="living-wellbeing" class="care-records"></div>`;
+  $("view-assistive").querySelector(".care-layout>div:first-child").append(wellbeing,panel);
+  const handover=E("section");handover.className="card";
+  handover.innerHTML=`<h2>照护交接摘要</h2><p class="help-text">汇总未完成请求、异常、清单及未来一天的提醒。默认省略联系人地址和历史私密备注；不会自动发送。</p><button id="living-handover-build" type="button">生成本机摘要</button><button id="living-handover-export" type="button" disabled>下载这份摘要</button><div id="living-handover" class="care-records"></div>`;
+  $("view-assistive").querySelector(".care-layout>div:last-child").append(handover);
+  let report=null;
+  const attempt=async fn=>{try{return await fn();}catch(error){A.message(error.message,true);return null;}};
+  function button(text,fn){const b=E("button",text);b.type="button";b.onclick=()=>attempt(fn);return b;}
+  function rows(id,records,draw){const box=$(id);box.replaceChildren();if(!records?.length)box.append(E("p","暂无记录"));for(const record of records||[]){const r=E("article");r.className="care-record";draw(r,record);box.append(r);}}
+  const labels={open:"待核实",acknowledged:"本人已知晓，尚未解决",resolved:"本人报告已解决",active:"在用台账",completed:"已停用"};
+  function render(s){
+    rows("living-wellbeing",s.wellbeing,(row,r)=>{const states={waiting:"等待本人确认",overdue:r.assistance_id?"已逾期，已建立本机协助记录":"已逾期，协助记录未建立，需人工核实",completed:"本人已确认",cancelled:"已取消"};row.append(E("strong",r.title),E("p",states[r.state]||r.state),E("p","确认时间："+new Date(r.due_at).toLocaleString()));if(["waiting","overdue"].includes(r.state))row.append(button("我在，结束本次等待",()=>A.act({op:"wellbeing.confirm",id:r.id})),button("取消本次等待",()=>A.act({op:"wellbeing.cancel",id:r.id})));if(r.assistance_id)row.append(E("p","关联的人工协助请求需另行核实处理。"));});
+    rows("living-incidents",s.incidents,(row,r)=>{row.append(E("strong",r.title),E("p",labels[r.state]||r.state),E("p",r.suggested_coordination||""));if(r.state!=="resolved")row.append(button("我已知晓",()=>A.act({op:"incident.ack",id:r.id})),button("本人确认异常已解决",()=>A.act({op:"incident.resolve",id:r.id})));});
+    rows("living-equipment",s.equipment,(row,r)=>{row.append(E("strong",r.title),E("p",labels[r.state]||r.state),E("p",r.service_due_at?"下次检查："+new Date(r.service_due_at).toLocaleString():"未设置检查提醒"));if(r.state==="active"){const label=E("label","后续检查时间（可留空）"),date=E("input");date.type="datetime-local";label.append(date);row.append(label,button("记录本人已安排维护",()=>A.act({op:"equipment.service",id:r.id,...(date.value?{next_due_at:new Date(date.value).toISOString()}:{})})),button("停用此台账",()=>A.act({op:"equipment.retire",id:r.id})));}});
+  }
+  $("living-incident-form").onsubmit=e=>{e.preventDefault();attempt(()=>A.act({op:"incident.create",category:$("living-incident-category").value,detail:$("living-incident-detail").value}));};
+  $("living-wellbeing-form").onsubmit=e=>{e.preventDefault();attempt(()=>A.act({op:"wellbeing.start",seconds:Number($("living-wellbeing-minutes").value)*60}));};
+  $("living-equipment-form").onsubmit=e=>{e.preventDefault();const date=$("living-equipment-date").value;attempt(()=>A.act({op:"equipment.add",title:$("living-equipment-title").value,category:$("living-equipment-kind").value,...(date?{service_due_at:new Date(date).toISOString()}:{})}));};
+  $("living-handover-build").onclick=()=>attempt(async()=>{const r=await A.act({op:"handover.build"});report=r.assistive.report;const box=$("living-handover");box.replaceChildren();box.append(E("p","生成于 "+new Date(report.generated_at).toLocaleString()+"；记录截至生成时刻"));const names={reminders:"近期提醒",assistance:"人工协助",incidents:"异常情况",equipment:"设备",needs:"用品需求",checklists:"未完成清单",wellbeing:"定时确认"};for(const [key,label]of Object.entries(names)){const details=E("details");details.append(E("summary",label+" · "+report[key].length));for(const item of report[key])details.append(E("p",(item.title||item.id)+" · "+(labels[item.state]||item.state)));box.append(details);}$("living-handover-export").disabled=false;});
+  $("living-handover-export").onclick=()=>{if(!report)return;const url=URL.createObjectURL(new Blob([JSON.stringify(report,null,2)],{type:"application/json"})),a=E("a");a.href=url;a.download="care-handover-"+new Date().toISOString().slice(0,10)+".json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+  window.addEventListener("assistive:state",e=>render(e.detail));
+  const current=A.getSnapshot();if(current)render(current);
+})();

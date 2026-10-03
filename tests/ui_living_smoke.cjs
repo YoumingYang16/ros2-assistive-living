@@ -1,0 +1,80 @@
+/* Local service only; no microphone, hardware, messages or model calls. */
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const base=process.env.UI_URL||'http://127.0.0.1:8773';
+(async()=>{
+  const browser=await chromium.launch({headless:true,executablePath:process.env.BROWSER_EXECUTABLE});
+  const page=await browser.newPage({viewport:{width:1440,height:1000}});
+  const errors=[],checks=[];page.on('pageerror',e=>errors.push(e.message));
+  async function snap(){return(await page.request.get(base+'/api/assistive')).json();}
+  function futureLocal(days){const d=new Date(Date.now()+days*86400000);d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,16);}
+  try{
+    await page.goto(base,{waitUntil:'networkidle'});
+    await page.locator('#care-domain option').nth(12).waitFor({state:'attached'});
+    assert.equal(await page.locator('#care-catalog article').count(),95);
+    assert.equal(await page.locator('#care-routines button').count(),14);
+    await page.locator('#care-domain').selectOption('continuity');
+    const count=await page.locator('#care-catalog article').count();assert.ok(count>5&&count<95);
+    await page.locator('#care-filter').fill('定时');assert.equal(await page.locator('#care-catalog article').count(),1);
+    await page.locator('#care-domain').selectOption('');await page.locator('#care-filter').fill('');
+    checks.push('95 unique scenario cards, 12 domain filters, and 14 routine entry points');
+    await page.locator('#living-wellbeing-minutes').fill('1');
+    await page.locator('#living-wellbeing-form button').click();
+    const waiting=page.locator('#living-wellbeing article').first();
+    await waiting.getByRole('button',{name:'我在，结束本次等待'}).click();
+    await page.waitForFunction(()=>document.querySelector('#living-wellbeing').textContent.includes('本人已确认'));
+    checks.push('opt-in timer starts and records personal confirmation without contacting anyone');
+    await page.locator('#living-incident-category').selectOption('power_failure');
+    await page.locator('#living-incident-detail').fill('仅软件测试，本人报告');
+    await page.locator('#living-incident-form button').click();
+    const incident=page.locator('#living-incidents article').filter({hasText:'停电'}).first();
+    await incident.getByRole('button',{name:'我已知晓',exact:true}).click();
+    await page.waitForFunction(()=>document.querySelector('#living-incidents').textContent.includes('尚未解决'));
+    let s=await snap();const record=s.incidents.find(r=>r.category==='power_failure');
+    assert.equal(s.assistance.find(r=>r.id===record.assistance_id).delivery_status,'not_sent');
+    checks.push('interruption report links to unsent help and preserves unresolved acknowledgment');
+    await page.locator('#living-equipment-title').fill('测试呼叫器');
+    await page.locator('#living-equipment-kind').selectOption('communication');
+    await page.locator('#living-equipment-date').fill(futureLocal(10));
+    await page.locator('#living-equipment-form button').click();
+    const equipment=page.locator('#living-equipment article').filter({hasText:'测试呼叫器'}).first();
+    await equipment.waitFor();
+    await equipment.locator('input').fill(futureLocal(20));
+    await equipment.getByRole('button',{name:'记录本人已安排维护'}).click();
+    await page.waitForFunction(()=>window.AssistiveUI.getSnapshot()?.equipment.some(r=>r.title==='测试呼叫器'&&r.service_reports.length===1));
+    s=await snap();assert.equal(s.equipment.find(r=>r.title==='测试呼叫器').hardware_verified,false);
+    checks.push('equipment and maintenance reminders persist with unverified hardware provenance');
+    await page.locator('#living-handover-build').click();
+    await page.locator('#living-handover-export').waitFor({state:'visible'});
+    await page.waitForFunction(()=>!document.querySelector('#living-handover-export').disabled);
+    assert.match(await page.locator('#living-handover').innerText(),/异常情况 · 1/);
+    const downloadPromise=page.waitForEvent('download');await page.locator('#living-handover-export').click();
+    const download=await downloadPromise;assert.match(download.suggestedFilename(),/^care-handover-/);
+    await incident.getByRole('button',{name:'本人确认异常已解决'}).click();
+    await page.waitForFunction(()=>document.querySelector('#living-incidents').textContent.includes('本人报告已解决'));
+    s=await snap();assert.notEqual(s.assistance.find(r=>r.id===record.assistance_id).state,'resolved');
+    checks.push('handover exports only on request; incident resolution does not fake help completion');
+    await page.reload({waitUntil:'networkidle'});
+    await page.locator('#living-equipment article').filter({hasText:'测试呼叫器'}).waitFor();
+    await page.route('**/api/state',async route=>{const response=await route.fetch();const value=await response.json();value.hardware_interlock={status:'unknown',reason:'browser UI fixture only'};await route.fulfill({response,json:value});});
+    await page.evaluate(()=>window.PatrolUI.refresh());
+    assert.equal(await page.locator('#living-hardware-lock').isVisible(),true);
+    assert.equal(await page.locator('#care-device-form button').isDisabled(),true);
+    assert.equal(await page.locator('#living-wellbeing-form button').isEnabled(),true);
+    await page.unroute('**/api/state');await page.evaluate(()=>window.PatrolUI.refresh());
+    assert.equal(await page.locator('#living-hardware-lock').isVisible(),false);
+    checks.push('unknown hardware status is visible and blocks device controls without blocking life records');
+    if(process.env.UI_ARTIFACTS){fs.mkdirSync(process.env.UI_ARTIFACTS,{recursive:true});await page.screenshot({path:path.join(process.env.UI_ARTIFACTS,'v6-living-desktop.png'),fullPage:true});}
+    if(process.env.UI_ARTIFACTS)await page.locator('#living-wellbeing-form').locator('..').screenshot({path:path.join(process.env.UI_ARTIFACTS,'v6-confirmation-panel.png')});
+    await page.setViewportSize({width:390,height:844});
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+    if(process.env.UI_ARTIFACTS)await page.screenshot({path:path.join(process.env.UI_ARTIFACTS,'v6-living-mobile.png'),fullPage:true});
+    if(process.env.UI_ARTIFACTS)await page.locator('#living-incident-form').locator('..').screenshot({path:path.join(process.env.UI_ARTIFACTS,'v6-equipment-mobile.png')});
+    assert.deepEqual(errors,[]);checks.push('reload persistence and mobile layout; no browser errors');
+    const result={ok:true,scope:'local_mock_only',checkpoints:checks,page_errors:errors};
+    if(process.env.UI_REPORT)fs.writeFileSync(process.env.UI_REPORT,JSON.stringify(result,null,2));
+    console.log(JSON.stringify(result));
+  }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

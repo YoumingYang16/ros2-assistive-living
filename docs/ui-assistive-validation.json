@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "scope": "local_mock_only",
+  "checkpoints": [
+    "home landing and scenario catalog render; software mode remains visible",
+    "due reminder acknowledges through persistent service",
+    "human assistance creation and locally attributed acknowledgment/resolution",
+    "supplies and daily routine checklist save user confirmations",
+    "household readback and confirmed delivery reach simulated receipt",
+    "large text and contrast persist; switch scan exits; AAC displays without auto speech",
+    "390px layout has no horizontal overflow and catalog filtering works"
+  ],
+  "page_errors": []
+}

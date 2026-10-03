@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "command",
+    "summary",
+    "steps",
+    "metadata",
+    "version"
+  ],
+  "properties": {
+    "command": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 12000
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]{0,47}$"
+          },
+          "target": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "seconds": {
+            "type": "number"
+          },
+          "object_name": {
+            "type": "string"
+          },
+          "timeout": {
+            "type": "number"
+          },
+          "max_retries": {
+            "type": "integer"
+          },
+          "step_id": {
+            "type": "string"
+          },
+          "condition": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/condition"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "params": {
+            "type": "object"
+          },
+          "on_failure": {
+            "enum": [
+              "abort",
+              "continue"
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "target",
+          "seconds",
+          "object_name",
+          "timeout",
+          "max_retries",
+          "step_id",
+          "condition",
+          "params",
+          "on_failure"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "version": {
+      "const": 3
+    }
+  },
+  "$defs": {
+    "condition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "step_id": {
+              "type": "string"
+            },
+            "outcome": {
+              "enum": [
+                "failed",
+                "found",
+                "inconclusive",
+                "not_found",
+                "skipped",
+                "succeeded",
+                "timed_out"
+              ]
+            }
+          },
+          "required": [
+            "step_id",
+            "outcome"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "all": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 16,
+              "items": {
+                "$ref": "#/$defs/condition"
+              }
+            }
+          },
+          "required": [
+            "all"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "any": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 16,
+              "items": {
+                "$ref": "#/$defs/condition"
+              }
+            }
+          },
+          "required": [
+            "any"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "not": {
+              "$ref": "#/$defs/condition"
+            }
+          },
+          "required": [
+            "not"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

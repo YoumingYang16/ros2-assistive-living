@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "command",
+    "summary",
+    "steps",
+    "metadata",
+    "version"
+  ],
+  "properties": {
+    "command": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 12000
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "navigate",
+              "inspect",
+              "wait"
+            ]
+          },
+          "target": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "seconds": {
+            "type": "number"
+          },
+          "object_name": {
+            "type": "string"
+          },
+          "timeout": {
+            "type": "number"
+          },
+          "max_retries": {
+            "type": "integer"
+          },
+          "step_id": {
+            "type": "string"
+          },
+          "condition": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "step_id": {
+                    "type": "string"
+                  },
+                  "outcome": {
+                    "type": "string",
+                    "enum": [
+                      "found",
+                      "not_found",
+                      "inconclusive",
+                      "succeeded"
+                    ]
+                  }
+                },
+                "required": [
+                  "step_id",
+                  "outcome"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "target",
+          "seconds",
+          "object_name",
+          "timeout",
+          "max_retries",
+          "step_id",
+          "condition"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "version": {
+      "const": 2
+    }
+  }
+}

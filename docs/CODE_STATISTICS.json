@@ -1,0 +1,130 @@
+{
+  "counting_method": "Physical lines including comments and blanks. Production: package Python/JS/HTML/CSS only; dependencies, models, data, docs, generated build trees excluded.",
+  "v1": {
+    "production": {
+      "files": 14,
+      "lines": 2191,
+      "nonblank_lines": 2003
+    },
+    "tests_and_evaluators": {
+      "files": 5,
+      "lines": 891,
+      "nonblank_lines": 745
+    },
+    "integration_and_launch": {
+      "files": 5,
+      "lines": 235,
+      "nonblank_lines": 217
+    },
+    "all_delivered_files": 37
+  },
+  "v2": {
+    "production": {
+      "files": 21,
+      "lines": 4249,
+      "nonblank_lines": 3920
+    },
+    "tests_and_evaluators": {
+      "files": 17,
+      "lines": 2645,
+      "nonblank_lines": 2310
+    },
+    "integration_and_launch": {
+      "files": 11,
+      "lines": 479,
+      "nonblank_lines": 449
+    },
+    "all_delivered_files": 83
+  },
+  "v3": {
+    "production": {
+      "files": 34,
+      "lines": 7179,
+      "nonblank_lines": 6623
+    },
+    "tests_and_evaluators": {
+      "files": 29,
+      "lines": 4236,
+      "nonblank_lines": 3721
+    },
+    "integration_and_launch": {
+      "files": 13,
+      "lines": 589,
+      "nonblank_lines": 556
+    },
+    "all_delivered_files": 124
+  },
+  "v4": {
+    "production": {
+      "files": 38,
+      "lines": 7715,
+      "nonblank_lines": 7135
+    },
+    "tests_and_evaluators": {
+      "files": 32,
+      "lines": 4794,
+      "nonblank_lines": 4229
+    },
+    "integration_and_launch": {
+      "files": 13,
+      "lines": 589,
+      "nonblank_lines": 556
+    },
+    "all_delivered_files": 136
+  },
+  "v5": {
+    "production": {
+      "files": 45,
+      "lines": 8960,
+      "nonblank_lines": 8293
+    },
+    "tests_and_evaluators": {
+      "files": 36,
+      "lines": 5628,
+      "nonblank_lines": 4958
+    },
+    "integration_and_launch": {
+      "files": 16,
+      "lines": 686,
+      "nonblank_lines": 651
+    },
+    "all_delivered_files": 165
+  },
+  "v6": {
+    "production": {
+      "files": 50,
+      "lines": 10056,
+      "nonblank_lines": 9303
+    },
+    "tests_and_evaluators": {
+      "files": 40,
+      "lines": 6815,
+      "nonblank_lines": 6020
+    },
+    "integration_and_launch": {
+      "files": 17,
+      "lines": 715,
+      "nonblank_lines": 678
+    },
+    "all_delivered_files": 182
+  },
+  "v7": {
+    "production": {
+      "files": 54,
+      "lines": 11203,
+      "nonblank_lines": 10377
+    },
+    "tests_and_evaluators": {
+      "files": 46,
+      "lines": 8149,
+      "nonblank_lines": 7215
+    },
+    "integration_and_launch": {
+      "files": 17,
+      "lines": 715,
+      "nonblank_lines": 678
+    },
+    "all_delivered_files": 200
+  },
+  "production_growth_v7_over_v6": 1.114
+}

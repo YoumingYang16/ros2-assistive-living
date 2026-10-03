@@ -1,0 +1,1703 @@
+{
+  "suite": "curated_chinese_semantics_v3",
+  "model_calls": 0,
+  "generated_at": "2026-10-03T11:23:32.684494+00:00",
+  "corpus_sha256": "f74127e81a8f5e578fe6509e6c2e85c74b1045007d1bef7d9d6aa0797f694c2e",
+  "scope": "deterministic regression only; not real-world ASR or general language accuracy",
+  "total": 179,
+  "passed": 179,
+  "failed": 0,
+  "accuracy": 1.0,
+  "unintended_task_acceptances": 0,
+  "latency_ms": {
+    "p50": 0.119,
+    "p95": 0.427
+  },
+  "categories": {
+    "navigation": {
+      "passed": 24,
+      "total": 24
+    },
+    "sequence": {
+      "passed": 10,
+      "total": 10
+    },
+    "inspection": {
+      "passed": 20,
+      "total": 20
+    },
+    "patrol": {
+      "passed": 10,
+      "total": 10
+    },
+    "wait": {
+      "passed": 10,
+      "total": 10
+    },
+    "control": {
+      "passed": 20,
+      "total": 20
+    },
+    "answer": {
+      "passed": 5,
+      "total": 5
+    },
+    "clarification": {
+      "passed": 8,
+      "total": 8
+    },
+    "context": {
+      "passed": 4,
+      "total": 4
+    },
+    "revision": {
+      "passed": 4,
+      "total": 4
+    },
+    "conditional": {
+      "passed": 6,
+      "total": 6
+    },
+    "rejection": {
+      "passed": 33,
+      "total": 33
+    },
+    "multi_site": {
+      "passed": 3,
+      "total": 3
+    },
+    "compound": {
+      "passed": 3,
+      "total": 3
+    },
+    "repeat": {
+      "passed": 2,
+      "total": 2
+    },
+    "fallback": {
+      "passed": 3,
+      "total": 3
+    },
+    "skills": {
+      "passed": 7,
+      "total": 7
+    },
+    "v3_rejection": {
+      "passed": 7,
+      "total": 7
+    }
+  },
+  "cases": [
+    {
+      "id": "nl-001",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 7.211,
+      "mismatches": []
+    },
+    {
+      "id": "nl-002",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.18,
+      "mismatches": []
+    },
+    {
+      "id": "nl-003",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.147,
+      "mismatches": []
+    },
+    {
+      "id": "nl-004",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.133,
+      "mismatches": []
+    },
+    {
+      "id": "nl-005",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.133,
+      "mismatches": []
+    },
+    {
+      "id": "nl-006",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.128,
+      "mismatches": []
+    },
+    {
+      "id": "nl-007",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.125,
+      "mismatches": []
+    },
+    {
+      "id": "nl-008",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.123,
+      "mismatches": []
+    },
+    {
+      "id": "nl-009",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.123,
+      "mismatches": []
+    },
+    {
+      "id": "nl-010",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.128,
+      "mismatches": []
+    },
+    {
+      "id": "nl-011",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.125,
+      "mismatches": []
+    },
+    {
+      "id": "nl-012",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.122,
+      "mismatches": []
+    },
+    {
+      "id": "nl-013",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.12,
+      "mismatches": []
+    },
+    {
+      "id": "nl-014",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.124,
+      "mismatches": []
+    },
+    {
+      "id": "nl-015",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.118,
+      "mismatches": []
+    },
+    {
+      "id": "nl-016",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.117,
+      "mismatches": []
+    },
+    {
+      "id": "nl-017",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.117,
+      "mismatches": []
+    },
+    {
+      "id": "nl-018",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.115,
+      "mismatches": []
+    },
+    {
+      "id": "nl-019",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.113,
+      "mismatches": []
+    },
+    {
+      "id": "nl-020",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.114,
+      "mismatches": []
+    },
+    {
+      "id": "nl-021",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.124,
+      "mismatches": []
+    },
+    {
+      "id": "nl-022",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.119,
+      "mismatches": []
+    },
+    {
+      "id": "nl-023",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.116,
+      "mismatches": []
+    },
+    {
+      "id": "nl-024",
+      "category": "navigation",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.128,
+      "mismatches": []
+    },
+    {
+      "id": "nl-025",
+      "category": "sequence",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.146,
+      "mismatches": []
+    },
+    {
+      "id": "nl-026",
+      "category": "sequence",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.18,
+      "mismatches": []
+    },
+    {
+      "id": "nl-027",
+      "category": "sequence",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.157,
+      "mismatches": []
+    },
+    {
+      "id": "nl-028",
+      "category": "sequence",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.17,
+      "mismatches": []
+    },
+    {
+      "id": "nl-029",
+      "category": "sequence",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.145,
+      "mismatches": []
+    },
+    {
+      "id": "nl-030",
+      "category": "sequence",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.144,
+      "mismatches": []
+    },
+    {
+      "id": "nl-031",
+      "category": "sequence",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.226,
+      "mismatches": []
+    },
+    {
+      "id": "nl-032",
+      "category": "sequence",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.155,
+      "mismatches": []
+    },
+    {
+      "id": "nl-033",
+      "category": "sequence",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.148,
+      "mismatches": []
+    },
+    {
+      "id": "nl-034",
+      "category": "sequence",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.162,
+      "mismatches": []
+    },
+    {
+      "id": "nl-035",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.236,
+      "mismatches": []
+    },
+    {
+      "id": "nl-036",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.179,
+      "mismatches": []
+    },
+    {
+      "id": "nl-037",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.151,
+      "mismatches": []
+    },
+    {
+      "id": "nl-038",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.154,
+      "mismatches": []
+    },
+    {
+      "id": "nl-039",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.148,
+      "mismatches": []
+    },
+    {
+      "id": "nl-040",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.144,
+      "mismatches": []
+    },
+    {
+      "id": "nl-041",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.142,
+      "mismatches": []
+    },
+    {
+      "id": "nl-042",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.143,
+      "mismatches": []
+    },
+    {
+      "id": "nl-043",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.141,
+      "mismatches": []
+    },
+    {
+      "id": "nl-044",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.142,
+      "mismatches": []
+    },
+    {
+      "id": "nl-045",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.142,
+      "mismatches": []
+    },
+    {
+      "id": "nl-046",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.143,
+      "mismatches": []
+    },
+    {
+      "id": "nl-047",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.143,
+      "mismatches": []
+    },
+    {
+      "id": "nl-048",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.143,
+      "mismatches": []
+    },
+    {
+      "id": "nl-049",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.141,
+      "mismatches": []
+    },
+    {
+      "id": "nl-050",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.226,
+      "mismatches": []
+    },
+    {
+      "id": "nl-051",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.158,
+      "mismatches": []
+    },
+    {
+      "id": "nl-052",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.383,
+      "mismatches": []
+    },
+    {
+      "id": "nl-053",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.147,
+      "mismatches": []
+    },
+    {
+      "id": "nl-054",
+      "category": "inspection",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.142,
+      "mismatches": []
+    },
+    {
+      "id": "nl-055",
+      "category": "patrol",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.386,
+      "mismatches": []
+    },
+    {
+      "id": "nl-056",
+      "category": "patrol",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.368,
+      "mismatches": []
+    },
+    {
+      "id": "nl-057",
+      "category": "patrol",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.481,
+      "mismatches": []
+    },
+    {
+      "id": "nl-058",
+      "category": "patrol",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.247,
+      "mismatches": []
+    },
+    {
+      "id": "nl-059",
+      "category": "patrol",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.354,
+      "mismatches": []
+    },
+    {
+      "id": "nl-060",
+      "category": "patrol",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.236,
+      "mismatches": []
+    },
+    {
+      "id": "nl-061",
+      "category": "patrol",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.427,
+      "mismatches": []
+    },
+    {
+      "id": "nl-062",
+      "category": "patrol",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.21,
+      "mismatches": []
+    },
+    {
+      "id": "nl-063",
+      "category": "patrol",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.246,
+      "mismatches": []
+    },
+    {
+      "id": "nl-064",
+      "category": "patrol",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.282,
+      "mismatches": []
+    },
+    {
+      "id": "nl-065",
+      "category": "wait",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.124,
+      "mismatches": []
+    },
+    {
+      "id": "nl-066",
+      "category": "wait",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.119,
+      "mismatches": []
+    },
+    {
+      "id": "nl-067",
+      "category": "wait",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.121,
+      "mismatches": []
+    },
+    {
+      "id": "nl-068",
+      "category": "wait",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.295,
+      "mismatches": []
+    },
+    {
+      "id": "nl-069",
+      "category": "wait",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.127,
+      "mismatches": []
+    },
+    {
+      "id": "nl-070",
+      "category": "wait",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.45,
+      "mismatches": []
+    },
+    {
+      "id": "nl-071",
+      "category": "wait",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.13,
+      "mismatches": []
+    },
+    {
+      "id": "nl-072",
+      "category": "wait",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.125,
+      "mismatches": []
+    },
+    {
+      "id": "nl-073",
+      "category": "wait",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.12,
+      "mismatches": []
+    },
+    {
+      "id": "nl-074",
+      "category": "wait",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.13,
+      "mismatches": []
+    },
+    {
+      "id": "nl-075",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "stop",
+      "actual_kind": "stop",
+      "latency_ms": 0.007,
+      "mismatches": []
+    },
+    {
+      "id": "nl-076",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "stop",
+      "actual_kind": "stop",
+      "latency_ms": 0.006,
+      "mismatches": []
+    },
+    {
+      "id": "nl-077",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "stop",
+      "actual_kind": "stop",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-078",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "stop",
+      "actual_kind": "stop",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-079",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "stop",
+      "actual_kind": "stop",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-080",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "stop",
+      "actual_kind": "stop",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-081",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "stop",
+      "actual_kind": "stop",
+      "latency_ms": 0.004,
+      "mismatches": []
+    },
+    {
+      "id": "nl-082",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "pause",
+      "actual_kind": "pause",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-083",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "pause",
+      "actual_kind": "pause",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-084",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "pause",
+      "actual_kind": "pause",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-085",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "pause",
+      "actual_kind": "pause",
+      "latency_ms": 0.004,
+      "mismatches": []
+    },
+    {
+      "id": "nl-086",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "resume",
+      "actual_kind": "resume",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-087",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "resume",
+      "actual_kind": "resume",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-088",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "resume",
+      "actual_kind": "resume",
+      "latency_ms": 0.004,
+      "mismatches": []
+    },
+    {
+      "id": "nl-089",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "resume",
+      "actual_kind": "resume",
+      "latency_ms": 0.004,
+      "mismatches": []
+    },
+    {
+      "id": "nl-090",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "status",
+      "actual_kind": "status",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-091",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "status",
+      "actual_kind": "status",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-092",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "status",
+      "actual_kind": "status",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-093",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "status",
+      "actual_kind": "status",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-094",
+      "category": "control",
+      "passed": true,
+      "expected_kind": "status",
+      "actual_kind": "status",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-095",
+      "category": "answer",
+      "passed": true,
+      "expected_kind": "answer",
+      "actual_kind": "answer",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-096",
+      "category": "answer",
+      "passed": true,
+      "expected_kind": "answer",
+      "actual_kind": "answer",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-097",
+      "category": "answer",
+      "passed": true,
+      "expected_kind": "answer",
+      "actual_kind": "answer",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-098",
+      "category": "answer",
+      "passed": true,
+      "expected_kind": "answer",
+      "actual_kind": "answer",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-099",
+      "category": "answer",
+      "passed": true,
+      "expected_kind": "answer",
+      "actual_kind": "answer",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-100",
+      "category": "clarification",
+      "passed": true,
+      "expected_kind": "clarify",
+      "actual_kind": "clarify",
+      "latency_ms": 0.053,
+      "mismatches": []
+    },
+    {
+      "id": "nl-101",
+      "category": "clarification",
+      "passed": true,
+      "expected_kind": "clarify",
+      "actual_kind": "clarify",
+      "latency_ms": 0.061,
+      "mismatches": []
+    },
+    {
+      "id": "nl-102",
+      "category": "clarification",
+      "passed": true,
+      "expected_kind": "clarify",
+      "actual_kind": "clarify",
+      "latency_ms": 0.053,
+      "mismatches": []
+    },
+    {
+      "id": "nl-103",
+      "category": "clarification",
+      "passed": true,
+      "expected_kind": "clarify",
+      "actual_kind": "clarify",
+      "latency_ms": 0.052,
+      "mismatches": []
+    },
+    {
+      "id": "nl-104",
+      "category": "clarification",
+      "passed": true,
+      "expected_kind": "clarify",
+      "actual_kind": "clarify",
+      "latency_ms": 0.049,
+      "mismatches": []
+    },
+    {
+      "id": "nl-105",
+      "category": "clarification",
+      "passed": true,
+      "expected_kind": "clarify",
+      "actual_kind": "clarify",
+      "latency_ms": 0.049,
+      "mismatches": []
+    },
+    {
+      "id": "nl-106",
+      "category": "clarification",
+      "passed": true,
+      "expected_kind": "clarify",
+      "actual_kind": "clarify",
+      "latency_ms": 0.06,
+      "mismatches": []
+    },
+    {
+      "id": "nl-107",
+      "category": "clarification",
+      "passed": true,
+      "expected_kind": "clarify",
+      "actual_kind": "clarify",
+      "latency_ms": 0.05,
+      "mismatches": []
+    },
+    {
+      "id": "nl-108",
+      "category": "context",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.213,
+      "mismatches": []
+    },
+    {
+      "id": "nl-109",
+      "category": "context",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.221,
+      "mismatches": []
+    },
+    {
+      "id": "nl-110",
+      "category": "context",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.365,
+      "mismatches": []
+    },
+    {
+      "id": "nl-111",
+      "category": "context",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.402,
+      "mismatches": []
+    },
+    {
+      "id": "nl-112",
+      "category": "revision",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.647,
+      "mismatches": []
+    },
+    {
+      "id": "nl-113",
+      "category": "revision",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.319,
+      "mismatches": []
+    },
+    {
+      "id": "nl-114",
+      "category": "revision",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.35,
+      "mismatches": []
+    },
+    {
+      "id": "nl-115",
+      "category": "revision",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.138,
+      "mismatches": []
+    },
+    {
+      "id": "nl-116",
+      "category": "conditional",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.859,
+      "mismatches": []
+    },
+    {
+      "id": "nl-117",
+      "category": "conditional",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.232,
+      "mismatches": []
+    },
+    {
+      "id": "nl-118",
+      "category": "conditional",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.194,
+      "mismatches": []
+    },
+    {
+      "id": "nl-119",
+      "category": "conditional",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.225,
+      "mismatches": []
+    },
+    {
+      "id": "nl-120",
+      "category": "conditional",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.188,
+      "mismatches": []
+    },
+    {
+      "id": "nl-121",
+      "category": "conditional",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.186,
+      "mismatches": []
+    },
+    {
+      "id": "nl-122",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.026,
+      "mismatches": []
+    },
+    {
+      "id": "nl-123",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.022,
+      "mismatches": []
+    },
+    {
+      "id": "nl-124",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.022,
+      "mismatches": []
+    },
+    {
+      "id": "nl-125",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.021,
+      "mismatches": []
+    },
+    {
+      "id": "nl-126",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.021,
+      "mismatches": []
+    },
+    {
+      "id": "nl-127",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.02,
+      "mismatches": []
+    },
+    {
+      "id": "nl-128",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.084,
+      "mismatches": []
+    },
+    {
+      "id": "nl-129",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.023,
+      "mismatches": []
+    },
+    {
+      "id": "nl-130",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.07,
+      "mismatches": []
+    },
+    {
+      "id": "nl-131",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.022,
+      "mismatches": []
+    },
+    {
+      "id": "nl-132",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.021,
+      "mismatches": []
+    },
+    {
+      "id": "nl-133",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.072,
+      "mismatches": []
+    },
+    {
+      "id": "nl-134",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.074,
+      "mismatches": []
+    },
+    {
+      "id": "nl-135",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.072,
+      "mismatches": []
+    },
+    {
+      "id": "nl-136",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.021,
+      "mismatches": []
+    },
+    {
+      "id": "nl-137",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.069,
+      "mismatches": []
+    },
+    {
+      "id": "nl-138",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.073,
+      "mismatches": []
+    },
+    {
+      "id": "nl-139",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.075,
+      "mismatches": []
+    },
+    {
+      "id": "nl-140",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.066,
+      "mismatches": []
+    },
+    {
+      "id": "nl-141",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.065,
+      "mismatches": []
+    },
+    {
+      "id": "nl-142",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.066,
+      "mismatches": []
+    },
+    {
+      "id": "nl-143",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.066,
+      "mismatches": []
+    },
+    {
+      "id": "nl-144",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.064,
+      "mismatches": []
+    },
+    {
+      "id": "nl-145",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.182,
+      "mismatches": []
+    },
+    {
+      "id": "nl-146",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.061,
+      "mismatches": []
+    },
+    {
+      "id": "nl-147",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.069,
+      "mismatches": []
+    },
+    {
+      "id": "nl-148",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.068,
+      "mismatches": []
+    },
+    {
+      "id": "nl-149",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-150",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.005,
+      "mismatches": []
+    },
+    {
+      "id": "nl-151",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.021,
+      "mismatches": []
+    },
+    {
+      "id": "nl-152",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.002,
+      "mismatches": []
+    },
+    {
+      "id": "nl-153",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.006,
+      "mismatches": []
+    },
+    {
+      "id": "nl-154",
+      "category": "rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.002,
+      "mismatches": []
+    },
+    {
+      "id": "v3-001",
+      "category": "multi_site",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.559,
+      "mismatches": []
+    },
+    {
+      "id": "v3-002",
+      "category": "multi_site",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.353,
+      "mismatches": []
+    },
+    {
+      "id": "v3-003",
+      "category": "multi_site",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.659,
+      "mismatches": []
+    },
+    {
+      "id": "v3-004",
+      "category": "compound",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.172,
+      "mismatches": []
+    },
+    {
+      "id": "v3-005",
+      "category": "compound",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.16,
+      "mismatches": []
+    },
+    {
+      "id": "v3-006",
+      "category": "compound",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.191,
+      "mismatches": []
+    },
+    {
+      "id": "v3-007",
+      "category": "repeat",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.429,
+      "mismatches": []
+    },
+    {
+      "id": "v3-008",
+      "category": "repeat",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.383,
+      "mismatches": []
+    },
+    {
+      "id": "v3-009",
+      "category": "fallback",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.109,
+      "mismatches": []
+    },
+    {
+      "id": "v3-010",
+      "category": "fallback",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.111,
+      "mismatches": []
+    },
+    {
+      "id": "v3-011",
+      "category": "fallback",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.089,
+      "mismatches": []
+    },
+    {
+      "id": "v3-012",
+      "category": "skills",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.073,
+      "mismatches": []
+    },
+    {
+      "id": "v3-013",
+      "category": "skills",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.071,
+      "mismatches": []
+    },
+    {
+      "id": "v3-014",
+      "category": "skills",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.163,
+      "mismatches": []
+    },
+    {
+      "id": "v3-015",
+      "category": "skills",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.079,
+      "mismatches": []
+    },
+    {
+      "id": "v3-016",
+      "category": "skills",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.065,
+      "mismatches": []
+    },
+    {
+      "id": "v3-017",
+      "category": "skills",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.071,
+      "mismatches": []
+    },
+    {
+      "id": "v3-018",
+      "category": "skills",
+      "passed": true,
+      "expected_kind": "task",
+      "actual_kind": "task",
+      "latency_ms": 0.076,
+      "mismatches": []
+    },
+    {
+      "id": "v3-019",
+      "category": "v3_rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.027,
+      "mismatches": []
+    },
+    {
+      "id": "v3-020",
+      "category": "v3_rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.023,
+      "mismatches": []
+    },
+    {
+      "id": "v3-021",
+      "category": "v3_rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.024,
+      "mismatches": []
+    },
+    {
+      "id": "v3-022",
+      "category": "v3_rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.061,
+      "mismatches": []
+    },
+    {
+      "id": "v3-023",
+      "category": "v3_rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.028,
+      "mismatches": []
+    },
+    {
+      "id": "v3-024",
+      "category": "v3_rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.064,
+      "mismatches": []
+    },
+    {
+      "id": "v3-025",
+      "category": "v3_rejection",
+      "passed": true,
+      "expected_kind": "reject",
+      "actual_kind": "reject",
+      "latency_ms": 0.061,
+      "mismatches": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": "7.0.0",
+  "generated_at": "2026-10-03T15:23:31.819Z",
+  "ok": true,
+  "backend": "real localhost mock service with explicitly enabled fixture skills",
+  "microphone": false,
+  "speaker": false,
+  "robot_hardware": false,
+  "checkpoints": [
+    "future queue creation, priority, pause and cancellation use real mock backend",
+    "workflow compile, template create/update and goal-aware execution pass",
+    "historic observations show evidence and create a reviewable recheck draft",
+    "form editor creates finite loops, child skills and typed prior-result conditions",
+    "typed template parameter form resolves a configured location in compiled plan",
+    "fourteen skill capabilities and lifecycle deactivate/reactivate are visible",
+    "backup create/verify/manifest download, retention policy and zero-match soft-archive preview/apply pass",
+    "history search form returns matching persisted task",
+    "recovery requires assessment and explicit checkbox before resume",
+    "all ten mobile views fit 390 px width",
+    "no page JavaScript errors or failed HTTP resources"
+  ],
+  "screenshot_directory": "docs/screenshots"
+}

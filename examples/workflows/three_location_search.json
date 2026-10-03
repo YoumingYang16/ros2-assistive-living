@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "name": "三地搜索水杯",
+  "steps": [
+    {"type": "search", "id": "find", "locations": ["reception", "storage", "meeting_room"], "object_name": "水杯", "return_home": "found", "continue_on": ["not_found"]},
+    {"type": "step", "kind": "report", "params": {"title": "搜索结果", "include_observations": true}}
+  ]
+}

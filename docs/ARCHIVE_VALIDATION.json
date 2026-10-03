@@ -1,0 +1,16 @@
+{
+  "extracted_home_assistance": "passed",
+  "version": "7.0.0",
+  "recorded_at": "2026-10-03T15:24:20.114286+00:00",
+  "archive_crc": "passed",
+  "required_files": "passed",
+  "source_file_identity": "passed",
+  "excludes_runtime_and_models": true,
+  "extracted_workflow_preview": "passed",
+  "extracted_timeout_fallback": "passed",
+  "extracted_http": {
+    "version": "7.0.0",
+    "endpoints": 22,
+    "status": "passed"
+  }
+}

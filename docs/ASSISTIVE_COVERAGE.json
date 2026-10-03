@@ -1,0 +1,1727 @@
+{
+  "version": "7.0.0",
+  "generated_at": "2026-10-03T15:23:10.454393+00:00",
+  "scope": "curated catalog examples; isolated software mock; no physical care or external communications",
+  "total": 95,
+  "passed": 95,
+  "results": [
+    {
+      "id": "hydration",
+      "label": "喝水提醒",
+      "domain": "nutrition",
+      "domain_label": "饮食与用品",
+      "mode": "software",
+      "workflow_type": "reminder",
+      "example": "10分钟后提醒我喝水",
+      "examples": [
+        "10分钟后提醒我喝水"
+      ],
+      "description": "持久化提醒、本人确认、稍后提醒、逾期记录",
+      "implementation": "持久化提醒、本人确认、稍后提醒、逾期记录",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "提醒已保存；到时在本地生活辅助面板显示，需本人确认。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "medication",
+      "label": "按已有安排提醒服药",
+      "domain": "health_support",
+      "domain_label": "既有健康安排与就医支持",
+      "mode": "software",
+      "workflow_type": "reminder",
+      "example": "30分钟后提醒我按既定安排服药",
+      "examples": [
+        "30分钟后提醒我按既定安排服药"
+      ],
+      "description": "持久化提醒、本人确认、稍后提醒、逾期记录",
+      "implementation": "持久化提醒、本人确认、稍后提醒、逾期记录",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "提醒已保存；到时在本地生活辅助面板显示，需本人确认。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "meal_reminder",
+      "label": "用餐提醒",
+      "domain": "nutrition",
+      "domain_label": "饮食与用品",
+      "mode": "software",
+      "workflow_type": "reminder",
+      "example": "1小时后提醒我吃饭",
+      "examples": [
+        "1小时后提醒我吃饭"
+      ],
+      "description": "持久化提醒、本人确认、稍后提醒、逾期记录",
+      "implementation": "持久化提醒、本人确认、稍后提醒、逾期记录",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "提醒已保存；到时在本地生活辅助面板显示，需本人确认。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "position_reminder",
+      "label": "自主调整姿势提醒",
+      "domain": "health_support",
+      "domain_label": "既有健康安排与就医支持",
+      "mode": "software",
+      "workflow_type": "reminder",
+      "example": "20分钟后提醒我调整姿势",
+      "examples": [
+        "20分钟后提醒我调整姿势"
+      ],
+      "description": "持久化提醒、本人确认、稍后提醒、逾期记录",
+      "implementation": "持久化提醒、本人确认、稍后提醒、逾期记录",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "提醒已保存；到时在本地生活辅助面板显示，需本人确认。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "exercise_reminder",
+      "label": "按个人安排活动提醒",
+      "domain": "health_support",
+      "domain_label": "既有健康安排与就医支持",
+      "mode": "software",
+      "workflow_type": "reminder",
+      "example": "1小时后提醒我按自己的安排活动",
+      "examples": [
+        "1小时后提醒我按自己的安排活动"
+      ],
+      "description": "持久化提醒、本人确认、稍后提醒、逾期记录",
+      "implementation": "持久化提醒、本人确认、稍后提醒、逾期记录",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "提醒已保存；到时在本地生活辅助面板显示，需本人确认。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "appointment",
+      "label": "预约与日程提醒",
+      "domain": "health_support",
+      "domain_label": "既有健康安排与就医支持",
+      "mode": "software",
+      "workflow_type": "reminder",
+      "example": "2小时后提醒我预约时间到了",
+      "examples": [
+        "2小时后提醒我预约时间到了"
+      ],
+      "description": "持久化提醒、本人确认、稍后提醒、逾期记录",
+      "implementation": "持久化提醒、本人确认、稍后提醒、逾期记录",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "提醒已保存；到时在本地生活辅助面板显示，需本人确认。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "sleep",
+      "label": "睡前准备",
+      "domain": "self_care",
+      "domain_label": "个人起居与身体照护",
+      "mode": "software",
+      "workflow_type": "checklist",
+      "example": "开始睡前清单",
+      "examples": [
+        "开始睡前清单"
+      ],
+      "description": "逐项由本人核对，未勾选不视为完成",
+      "implementation": "逐项由本人核对，未勾选不视为完成",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "清单已开始，请逐项核对。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "morning",
+      "label": "起床与晨间准备",
+      "domain": "self_care",
+      "domain_label": "个人起居与身体照护",
+      "mode": "software",
+      "workflow_type": "checklist",
+      "example": "开始晨间清单",
+      "examples": [
+        "开始晨间清单"
+      ],
+      "description": "逐项由本人核对，未勾选不视为完成",
+      "implementation": "逐项由本人核对，未勾选不视为完成",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "清单已开始，请逐项核对。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "outdoor_prepare",
+      "label": "出门准备",
+      "domain": "community",
+      "domain_label": "出行、旅行与社区参与",
+      "mode": "software",
+      "workflow_type": "checklist",
+      "example": "开始出门清单",
+      "examples": [
+        "开始出门清单"
+      ],
+      "description": "逐项由本人核对，未勾选不视为完成",
+      "implementation": "逐项由本人核对，未勾选不视为完成",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "清单已开始，请逐项核对。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "return_home",
+      "label": "回家检查",
+      "domain": "community",
+      "domain_label": "出行、旅行与社区参与",
+      "mode": "software",
+      "workflow_type": "checklist",
+      "example": "开始回家清单",
+      "examples": [
+        "开始回家清单"
+      ],
+      "description": "逐项由本人核对，未勾选不视为完成",
+      "implementation": "逐项由本人核对，未勾选不视为完成",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "清单已开始，请逐项核对。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "shopping",
+      "label": "购物与日用品需求",
+      "domain": "nutrition",
+      "domain_label": "饮食与用品",
+      "mode": "software",
+      "workflow_type": "need",
+      "example": "把纸巾加入购物清单",
+      "examples": [
+        "把纸巾加入购物清单"
+      ],
+      "description": "持久化需求清单，不自动购物或付款",
+      "implementation": "持久化需求清单，不自动购物或付款",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "需求已加入清单；未进行购买或付款。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "food_supply",
+      "label": "食品补充需求",
+      "domain": "nutrition",
+      "domain_label": "饮食与用品",
+      "mode": "software",
+      "workflow_type": "need",
+      "example": "把牛奶加入购物清单",
+      "examples": [
+        "把牛奶加入购物清单"
+      ],
+      "description": "持久化需求清单，不自动购物或付款",
+      "implementation": "持久化需求清单，不自动购物或付款",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "需求已加入清单；未进行购买或付款。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "care_supply",
+      "label": "辅助用品补充",
+      "domain": "nutrition",
+      "domain_label": "饮食与用品",
+      "mode": "software",
+      "workflow_type": "need",
+      "example": "把护理垫加入购物清单",
+      "examples": [
+        "把护理垫加入购物清单"
+      ],
+      "description": "持久化需求清单，不自动购物或付款",
+      "implementation": "持久化需求清单，不自动购物或付款",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "需求已加入清单；未进行购买或付款。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "checkin",
+      "label": "本人状态与舒适度记录",
+      "domain": "health_support",
+      "domain_label": "既有健康安排与就医支持",
+      "mode": "software",
+      "workflow_type": "checkin",
+      "example": "记录我现在感觉良好",
+      "examples": [
+        "记录我现在感觉良好"
+      ],
+      "description": "本人自述记录，不作诊断或治疗决定",
+      "implementation": "本人自述记录，不作诊断或治疗决定",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "已保存本人状态记录。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "pain_report",
+      "label": "不适记录与人工帮助",
+      "domain": "health_support",
+      "domain_label": "既有健康安排与就医支持",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我身体不舒服需要帮助",
+      "examples": [
+        "我身体不舒服需要帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已保存本人状态记录。同时创建了尚未发送的本地协助请求。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "toileting",
+      "label": "如厕协助",
+      "domain": "self_care",
+      "domain_label": "个人起居与身体照护",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要如厕帮助",
+      "examples": [
+        "我需要如厕帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "bathing",
+      "label": "洗浴协助",
+      "domain": "self_care",
+      "domain_label": "个人起居与身体照护",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要洗澡帮助",
+      "examples": [
+        "我需要洗澡帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "dressing",
+      "label": "穿脱衣物协助",
+      "domain": "self_care",
+      "domain_label": "个人起居与身体照护",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要穿衣帮助",
+      "examples": [
+        "我需要穿衣帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "transfer",
+      "label": "床椅移乘协助",
+      "domain": "self_care",
+      "domain_label": "个人起居与身体照护",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要移乘帮助",
+      "examples": [
+        "我需要移乘帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "feeding",
+      "label": "进食协助",
+      "domain": "self_care",
+      "domain_label": "个人起居与身体照护",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要喂饭帮助",
+      "examples": [
+        "我需要喂饭帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "positioning",
+      "label": "身体翻身或体位协助",
+      "domain": "self_care",
+      "domain_label": "个人起居与身体照护",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要翻身帮助",
+      "examples": [
+        "我需要翻身帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "oral_care",
+      "label": "刷牙和口腔清洁协助",
+      "domain": "self_care",
+      "domain_label": "个人起居与身体照护",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要刷牙帮助",
+      "examples": [
+        "我需要刷牙帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "grooming",
+      "label": "梳洗与个人整理",
+      "domain": "self_care",
+      "domain_label": "个人起居与身体照护",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要梳头帮助",
+      "examples": [
+        "我需要梳头帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "cooking",
+      "label": "做饭与热食协助",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要做饭帮助",
+      "examples": [
+        "我需要做饭帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "dishwashing",
+      "label": "餐具清洁协助",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要洗碗帮助",
+      "examples": [
+        "我需要洗碗帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "laundry",
+      "label": "洗衣与晾晒协助",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要洗衣帮助",
+      "examples": [
+        "我需要洗衣帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "cleaning",
+      "label": "居室清洁协助",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要打扫帮助",
+      "examples": [
+        "我需要打扫帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "waste",
+      "label": "垃圾处理协助",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要倒垃圾帮助",
+      "examples": [
+        "我需要倒垃圾帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "package",
+      "label": "快递与门外物品接收",
+      "domain": "responsibilities",
+      "domain_label": "家庭责任与事务办理",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要取快递帮助",
+      "examples": [
+        "我需要取快递帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "escort",
+      "label": "外出陪同",
+      "domain": "community",
+      "domain_label": "出行、旅行与社区参与",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要陪同出门",
+      "examples": [
+        "我需要陪同出门"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "stairs",
+      "label": "台阶与跨越障碍协助",
+      "domain": "mobility",
+      "domain_label": "室内移动与物品操作",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要上下楼帮助",
+      "examples": [
+        "我需要上下楼帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "mobility_aid",
+      "label": "轮椅与辅助器具调整",
+      "domain": "mobility",
+      "domain_label": "室内移动与物品操作",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要调整轮椅帮助",
+      "examples": [
+        "我需要调整轮椅帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "visitor",
+      "label": "访客核实与应门协助",
+      "domain": "communication",
+      "domain_label": "沟通、社交与个人自主",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要应门帮助",
+      "examples": [
+        "我需要应门帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "pet_care",
+      "label": "宠物照料协助",
+      "domain": "responsibilities",
+      "domain_label": "家庭责任与事务办理",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要照顾宠物帮助",
+      "examples": [
+        "我需要照顾宠物帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "plant_care",
+      "label": "植物照料协助",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要浇花帮助",
+      "examples": [
+        "我需要浇花帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "paperwork",
+      "label": "文件与表单协助",
+      "domain": "work_learning",
+      "domain_label": "工作、学习与文娱",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要填写表格帮助",
+      "examples": [
+        "我需要填写表格帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "communication",
+      "label": "联系亲友的人工协助",
+      "domain": "communication",
+      "domain_label": "沟通、社交与个人自主",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要联系家人帮助",
+      "examples": [
+        "我需要联系家人帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "companionship",
+      "label": "陪伴与交流请求",
+      "domain": "communication",
+      "domain_label": "沟通、社交与个人自主",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要有人陪伴",
+      "examples": [
+        "我需要有人陪伴"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "charging",
+      "label": "手机及辅助设备充电协助",
+      "domain": "equipment",
+      "domain_label": "辅助器具与设备维护",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要充电帮助",
+      "examples": [
+        "我需要充电帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "home_hazard",
+      "label": "烟雾、漏水等居家危险求助",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "家里漏水了需要帮助",
+      "examples": [
+        "家里漏水了需要帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "emergency",
+      "label": "紧急求助记录与待人工响应",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "紧急求助",
+      "examples": [
+        "紧急求助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "fetch_item",
+      "label": "物品取送与交接",
+      "domain": "mobility",
+      "domain_label": "室内移动与物品操作",
+      "mode": "hardware_interface",
+      "workflow_type": "hardware_interface",
+      "example": "把手机从客厅送到卧室",
+      "examples": [
+        "把手机从客厅送到卧室"
+      ],
+      "description": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "implementation": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "boundary": "等待硬件接口接入和真实验证",
+      "passed": true,
+      "simulated": true,
+      "message": "任务已接受：在客厅确认手机，取物后送到卧室，等待本人接收确认",
+      "dispatch_kind": "task"
+    },
+    {
+      "id": "find_item",
+      "label": "寻找物品",
+      "domain": "mobility",
+      "domain_label": "室内移动与物品操作",
+      "mode": "hardware_interface",
+      "workflow_type": "hardware_interface",
+      "example": "去客厅找手机",
+      "examples": [
+        "去客厅找手机"
+      ],
+      "description": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "implementation": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "boundary": "等待硬件接口接入和真实验证",
+      "passed": true,
+      "simulated": true,
+      "message": "任务已接受：前往客厅 → 检查客厅是否有手机",
+      "dispatch_kind": "task"
+    },
+    {
+      "id": "lighting",
+      "label": "照明控制",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "hardware_interface",
+      "workflow_type": "hardware_interface",
+      "example": "打开卧室灯",
+      "examples": [
+        "打开卧室灯"
+      ],
+      "description": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "implementation": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "boundary": "等待硬件接口接入和真实验证",
+      "passed": true,
+      "simulated": true,
+      "message": "任务已接受：打开卧室灯，等待设备状态回读",
+      "dispatch_kind": "task"
+    },
+    {
+      "id": "climate",
+      "label": "风扇设备控制",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "hardware_interface",
+      "workflow_type": "hardware_interface",
+      "example": "打开卧室风扇",
+      "examples": [
+        "打开卧室风扇"
+      ],
+      "description": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "implementation": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "boundary": "等待硬件接口接入和真实验证",
+      "passed": true,
+      "simulated": true,
+      "message": "任务已接受：打开卧室风扇，等待设备状态回读",
+      "dispatch_kind": "task"
+    },
+    {
+      "id": "curtains",
+      "label": "窗帘控制",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "hardware_interface",
+      "workflow_type": "hardware_interface",
+      "example": "打开客厅窗帘",
+      "examples": [
+        "打开客厅窗帘"
+      ],
+      "description": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "implementation": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "boundary": "等待硬件接口接入和真实验证",
+      "passed": true,
+      "simulated": true,
+      "message": "任务已接受：打开客厅窗帘，等待设备状态回读",
+      "dispatch_kind": "task"
+    },
+    {
+      "id": "television",
+      "label": "电视电源控制",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "hardware_interface",
+      "workflow_type": "hardware_interface",
+      "example": "打开客厅电视",
+      "examples": [
+        "打开客厅电视"
+      ],
+      "description": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "implementation": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "boundary": "等待硬件接口接入和真实验证",
+      "passed": true,
+      "simulated": true,
+      "message": "任务已接受：打开客厅电视，等待设备状态回读",
+      "dispatch_kind": "task"
+    },
+    {
+      "id": "navigation",
+      "label": "室内移动",
+      "domain": "mobility",
+      "domain_label": "室内移动与物品操作",
+      "mode": "hardware_interface",
+      "workflow_type": "hardware_interface",
+      "example": "去卧室",
+      "examples": [
+        "去卧室"
+      ],
+      "description": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "implementation": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "boundary": "等待硬件接口接入和真实验证",
+      "passed": true,
+      "simulated": true,
+      "message": "任务已接受：前往卧室",
+      "dispatch_kind": "task"
+    },
+    {
+      "id": "stop",
+      "label": "随时中止机器人动作",
+      "domain": "interaction",
+      "domain_label": "机器人交互与无障碍操作",
+      "mode": "hardware_interface",
+      "workflow_type": "hardware_interface",
+      "example": "立即停止",
+      "examples": [
+        "立即停止"
+      ],
+      "description": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "implementation": "由机器人动作接口处理；设备接入和真实执行尚需独立验证",
+      "boundary": "等待硬件接口接入和真实验证",
+      "passed": true,
+      "message": "当前没有执行中的任务；待处理规划已取消",
+      "dispatch_kind": "stop"
+    },
+    {
+      "id": "accessibility",
+      "label": "大字高对比与交互偏好",
+      "domain": "interaction",
+      "domain_label": "机器人交互与无障碍操作",
+      "mode": "software",
+      "workflow_type": "profile",
+      "example": "打开大字模式",
+      "examples": [
+        "打开大字模式"
+      ],
+      "description": "保存使用者的显示与交互偏好",
+      "implementation": "保存使用者的显示与交互偏好",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "个人偏好已保存。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "continence",
+      "label": "失禁用品与个人清洁协助",
+      "domain": "self_care",
+      "domain_label": "个人起居与身体照护",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要更换护理用品帮助",
+      "examples": [
+        "我需要更换护理用品帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "intimate_hygiene",
+      "label": "经期或私密卫生协助",
+      "domain": "self_care",
+      "domain_label": "个人起居与身体照护",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要私密卫生帮助",
+      "examples": [
+        "我需要私密卫生帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "medical_equipment",
+      "label": "既有医疗辅助设备的人工操作协助",
+      "domain": "health_support",
+      "domain_label": "既有健康安排与就医支持",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要医疗辅助设备操作帮助",
+      "examples": [
+        "我需要医疗辅助设备操作帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "prescription_supply",
+      "label": "既有处方续配与药品补充协助",
+      "domain": "health_support",
+      "domain_label": "既有健康安排与就医支持",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要按已有处方补充药品帮助",
+      "examples": [
+        "我需要按已有处方补充药品帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "measurement_help",
+      "label": "按既有安排测量与记录协助",
+      "domain": "health_support",
+      "domain_label": "既有健康安排与就医支持",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要测量记录帮助",
+      "examples": [
+        "我需要测量记录帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "therapy_help",
+      "label": "按已有康复计划的人力协助",
+      "domain": "health_support",
+      "domain_label": "既有健康安排与就医支持",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要按已有康复计划活动帮助",
+      "examples": [
+        "我需要按已有康复计划活动帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "open_packaging",
+      "label": "食品与用品包装开启协助",
+      "domain": "nutrition",
+      "domain_label": "饮食与用品",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要打开包装帮助",
+      "examples": [
+        "我需要打开包装帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "diet_preference",
+      "label": "向照护者说明既定饮食要求",
+      "domain": "nutrition",
+      "domain_label": "饮食与用品",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要说明饮食要求帮助",
+      "examples": [
+        "我需要说明饮食要求帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "grocery_storage",
+      "label": "采购品接收与存放协助",
+      "domain": "nutrition",
+      "domain_label": "饮食与用品",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要存放采购物品帮助",
+      "examples": [
+        "我需要存放采购物品帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "bedding",
+      "label": "床品更换与床铺整理协助",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要更换床单帮助",
+      "examples": [
+        "我需要更换床单帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "home_repair",
+      "label": "家庭设施维修协调",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要维修家庭设施帮助",
+      "examples": [
+        "我需要维修家庭设施帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "accessible_layout",
+      "label": "可触及物品与通行空间调整",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要调整无障碍布局帮助",
+      "examples": [
+        "我需要调整无障碍布局帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "temperature_help",
+      "label": "空调与供暖设备人工调整",
+      "domain": "household",
+      "domain_label": "家务与居家环境",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要调整空调温度帮助",
+      "examples": [
+        "我需要调整空调温度帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "assistive_setup",
+      "label": "辅助输入与通信设备设置",
+      "domain": "equipment",
+      "domain_label": "辅助器具与设备维护",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要设置辅助输入设备帮助",
+      "examples": [
+        "我需要设置辅助输入设备帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "accessible_transport",
+      "label": "无障碍交通安排协助",
+      "domain": "community",
+      "domain_label": "出行、旅行与社区参与",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要安排无障碍交通帮助",
+      "examples": [
+        "我需要安排无障碍交通帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "venue_access",
+      "label": "目的地可达性与设施核实",
+      "domain": "community",
+      "domain_label": "出行、旅行与社区参与",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要核实目的地无障碍设施帮助",
+      "examples": [
+        "我需要核实目的地无障碍设施帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "travel_accommodation",
+      "label": "外宿与旅行支持安排",
+      "domain": "community",
+      "domain_label": "出行、旅行与社区参与",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要安排无障碍住宿帮助",
+      "examples": [
+        "我需要安排无障碍住宿帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "remote_meeting",
+      "label": "远程会议与线上交流操作协助",
+      "domain": "work_learning",
+      "domain_label": "工作、学习与文娱",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要参加远程会议帮助",
+      "examples": [
+        "我需要参加远程会议帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "reading_help",
+      "label": "信件、屏幕和纸质资料阅读协助",
+      "domain": "work_learning",
+      "domain_label": "工作、学习与文娱",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要阅读资料帮助",
+      "examples": [
+        "我需要阅读资料帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "recreation",
+      "label": "兴趣活动与文娱用品操作协助",
+      "domain": "work_learning",
+      "domain_label": "工作、学习与文娱",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要进行兴趣活动帮助",
+      "examples": [
+        "我需要进行兴趣活动帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "parenting",
+      "label": "育儿相关人力协助",
+      "domain": "responsibilities",
+      "domain_label": "家庭责任与事务办理",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要照顾孩子帮助",
+      "examples": [
+        "我需要照顾孩子帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "dependent_care",
+      "label": "其他家庭成员照护安排",
+      "domain": "responsibilities",
+      "domain_label": "家庭责任与事务办理",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要安排家人照护帮助",
+      "examples": [
+        "我需要安排家人照护帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "bills_admin",
+      "label": "账单核对与事务办理协助",
+      "domain": "responsibilities",
+      "domain_label": "家庭责任与事务办理",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要核对账单帮助",
+      "examples": [
+        "我需要核对账单帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "online_order",
+      "label": "购物下单过程的人工协助",
+      "domain": "responsibilities",
+      "domain_label": "家庭责任与事务办理",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要网上购物操作帮助",
+      "examples": [
+        "我需要网上购物操作帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "private_conversation",
+      "label": "保留隐私的交流安排",
+      "domain": "communication",
+      "domain_label": "沟通、社交与个人自主",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要私下交流帮助",
+      "examples": [
+        "我需要私下交流帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "personal_boundaries",
+      "label": "表达身体接触与照护边界",
+      "domain": "communication",
+      "domain_label": "沟通、社交与个人自主",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要表达照护边界帮助",
+      "examples": [
+        "我需要表达照护边界帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "support_interruption",
+      "label": "支持中断与备用人员协调",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "human_assistance",
+      "workflow_type": "human_assistance",
+      "example": "我需要备用照护人员帮助",
+      "examples": [
+        "我需要备用照护人员帮助"
+      ],
+      "description": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "implementation": "本地人工协助请求，须人工确认处理；未接通信接口不会发送",
+      "boundary": "本机记录，不等于消息送达或实际照护完成",
+      "passed": true,
+      "message": "已记录人工协助请求，尚未发送给任何人。请使用已配置的现实求助方式联系能够提供帮助的人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "routine_medical_visit",
+      "label": "就医准备",
+      "domain": "health_support",
+      "domain_label": "既有健康安排与就医支持",
+      "mode": "software",
+      "workflow_type": "checklist",
+      "example": "开始就医准备清单",
+      "examples": [
+        "开始就医准备清单"
+      ],
+      "description": "逐项由本人核对，未勾选不视为完成",
+      "implementation": "逐项由本人核对，未勾选不视为完成",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "清单已开始，请逐项核对。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "routine_travel",
+      "label": "旅行准备",
+      "domain": "community",
+      "domain_label": "出行、旅行与社区参与",
+      "mode": "software",
+      "workflow_type": "checklist",
+      "example": "开始旅行准备清单",
+      "examples": [
+        "开始旅行准备清单"
+      ],
+      "description": "逐项由本人核对，未勾选不视为完成",
+      "implementation": "逐项由本人核对，未勾选不视为完成",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "清单已开始，请逐项核对。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "routine_work_study",
+      "label": "工作学习准备",
+      "domain": "work_learning",
+      "domain_label": "工作、学习与文娱",
+      "mode": "software",
+      "workflow_type": "checklist",
+      "example": "开始工作学习准备清单",
+      "examples": [
+        "开始工作学习准备清单"
+      ],
+      "description": "逐项由本人核对，未勾选不视为完成",
+      "implementation": "逐项由本人核对，未勾选不视为完成",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "清单已开始，请逐项核对。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "routine_social",
+      "label": "社交活动准备",
+      "domain": "communication",
+      "domain_label": "沟通、社交与个人自主",
+      "mode": "software",
+      "workflow_type": "checklist",
+      "example": "开始社交活动准备清单",
+      "examples": [
+        "开始社交活动准备清单"
+      ],
+      "description": "逐项由本人核对，未勾选不视为完成",
+      "implementation": "逐项由本人核对，未勾选不视为完成",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "清单已开始，请逐项核对。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "routine_outage_prepare",
+      "label": "停电备用准备",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "software",
+      "workflow_type": "checklist",
+      "example": "开始停电备用准备清单",
+      "examples": [
+        "开始停电备用准备清单"
+      ],
+      "description": "逐项由本人核对，未勾选不视为完成",
+      "implementation": "逐项由本人核对，未勾选不视为完成",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "清单已开始，请逐项核对。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "routine_evacuation_prepare",
+      "label": "应急撤离准备",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "software",
+      "workflow_type": "checklist",
+      "example": "开始应急撤离准备清单",
+      "examples": [
+        "开始应急撤离准备清单"
+      ],
+      "description": "逐项由本人核对，未勾选不视为完成",
+      "implementation": "逐项由本人核对，未勾选不视为完成",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "清单已开始，请逐项核对。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "routine_therapy_prepare",
+      "label": "个人活动准备",
+      "domain": "health_support",
+      "domain_label": "既有健康安排与就医支持",
+      "mode": "software",
+      "workflow_type": "checklist",
+      "example": "开始个人活动准备清单",
+      "examples": [
+        "开始个人活动准备清单"
+      ],
+      "description": "逐项由本人核对，未勾选不视为完成",
+      "implementation": "逐项由本人核对，未勾选不视为完成",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "清单已开始，请逐项核对。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "routine_visitor_prepare",
+      "label": "访客准备",
+      "domain": "communication",
+      "domain_label": "沟通、社交与个人自主",
+      "mode": "software",
+      "workflow_type": "checklist",
+      "example": "开始访客准备清单",
+      "examples": [
+        "开始访客准备清单"
+      ],
+      "description": "逐项由本人核对，未勾选不视为完成",
+      "implementation": "逐项由本人核对，未勾选不视为完成",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "清单已开始，请逐项核对。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "incident_power_failure",
+      "label": "停电报告与后续核实",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "software",
+      "workflow_type": "incident",
+      "example": "报告停电",
+      "examples": [
+        "报告停电"
+      ],
+      "description": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "implementation": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "异常已按本人报告记录，同时建立尚未发送的人工协助请求。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "incident_network_failure",
+      "label": "网络中断报告与后续核实",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "software",
+      "workflow_type": "incident",
+      "example": "报告网络中断",
+      "examples": [
+        "报告网络中断"
+      ],
+      "description": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "implementation": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "异常已按本人报告记录，同时建立尚未发送的人工协助请求。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "incident_device_failure",
+      "label": "辅助设备故障报告与后续核实",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "software",
+      "workflow_type": "incident",
+      "example": "报告辅助设备故障",
+      "examples": [
+        "报告辅助设备故障"
+      ],
+      "description": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "implementation": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "异常已按本人报告记录，同时建立尚未发送的人工协助请求。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "incident_blocked_route",
+      "label": "通道或出口受阻报告与后续核实",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "software",
+      "workflow_type": "incident",
+      "example": "报告通道或出口受阻",
+      "examples": [
+        "报告通道或出口受阻"
+      ],
+      "description": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "implementation": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "异常已按本人报告记录，同时建立尚未发送的人工协助请求。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "incident_caregiver_absent",
+      "label": "照护人员未到报告与后续核实",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "software",
+      "workflow_type": "incident",
+      "example": "报告照护人员未到",
+      "examples": [
+        "报告照护人员未到"
+      ],
+      "description": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "implementation": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "异常已按本人报告记录，同时建立尚未发送的人工协助请求。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "incident_extreme_weather",
+      "label": "恶劣天气影响报告与后续核实",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "software",
+      "workflow_type": "incident",
+      "example": "报告恶劣天气影响",
+      "examples": [
+        "报告恶劣天气影响"
+      ],
+      "description": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "implementation": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "异常已按本人报告记录，同时建立尚未发送的人工协助请求。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "incident_lost_communication",
+      "label": "呼叫设备不可用报告与后续核实",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "software",
+      "workflow_type": "incident",
+      "example": "报告呼叫设备不可用",
+      "examples": [
+        "报告呼叫设备不可用"
+      ],
+      "description": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "implementation": "本人异常报告、关联人工协助与后续核实；不是自动传感器检测",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "异常已按本人报告记录，同时建立尚未发送的人工协助请求。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "care_handover",
+      "label": "待办与照护交接摘要",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "software",
+      "workflow_type": "handover",
+      "example": "生成照护交接摘要",
+      "examples": [
+        "生成照护交接摘要"
+      ],
+      "description": "汇总未结束待办与近期提醒，默认不对外分享",
+      "implementation": "汇总未结束待办与近期提醒，默认不对外分享",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "已生成本机待办交接摘要，尚未分享给任何人。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "equipment_register",
+      "label": "辅助设备台账与维护提醒",
+      "domain": "equipment",
+      "domain_label": "辅助器具与设备维护",
+      "mode": "software",
+      "workflow_type": "equipment",
+      "example": "登记我的轮椅",
+      "examples": [
+        "登记我的轮椅"
+      ],
+      "description": "设备台账、本人维护记录及关联到时提醒；不是硬件检查",
+      "implementation": "设备台账、本人维护记录及关联到时提醒；不是硬件检查",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "设备台账已登记；维护日期由本人填写，不代表已连接或检查过设备。",
+      "dispatch_kind": "assistive"
+    },
+    {
+      "id": "wellbeing_check",
+      "label": "本人自选定时平安确认",
+      "domain": "continuity",
+      "domain_label": "照护连续性与异常情况",
+      "mode": "software",
+      "workflow_type": "wellbeing",
+      "example": "开始30分钟平安确认",
+      "examples": [
+        "开始30分钟平安确认"
+      ],
+      "description": "本人主动开启的确认等待；逾期建立本地协助请求，不推断健康状态",
+      "implementation": "本人主动开启的确认等待；逾期建立本地协助请求，不推断健康状态",
+      "boundary": "由本人确认记录，不推断实际活动已完成",
+      "passed": true,
+      "message": "已开始本人自选的确认等待；到时未确认会创建本机协助记录，不推断发生危险，也不会自动对外呼叫。",
+      "dispatch_kind": "assistive"
+    }
+  ],
+  "external_messages_sent": 0
+}

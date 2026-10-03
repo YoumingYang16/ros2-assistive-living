@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "scope": "local_mock_only",
+  "checkpoints": [
+    "95 unique scenario cards, 12 domain filters, and 14 routine entry points",
+    "opt-in timer starts and records personal confirmation without contacting anyone",
+    "interruption report links to unsent help and preserves unresolved acknowledgment",
+    "equipment and maintenance reminders persist with unverified hardware provenance",
+    "handover exports only on request; incident resolution does not fake help completion",
+    "unknown hardware status is visible and blocks device controls without blocking life records",
+    "reload persistence and mobile layout; no browser errors"
+  ],
+  "page_errors": []
+}

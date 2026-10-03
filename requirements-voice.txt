@@ -1,0 +1,5 @@
+# Optional only. The web console and mock backend need no third-party packages.
+# A separately downloaded local Chinese Vosk model is required for voice_client.
+# Vosk microphone example: https://github.com/alphacep/vosk-api/blob/master/python/example/test_microphone.py
+vosk>=0.3.45,<0.4
+sounddevice>=0.5,<0.6

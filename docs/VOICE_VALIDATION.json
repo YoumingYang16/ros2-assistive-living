@@ -1,0 +1,54 @@
+{
+  "version": "3.0.0",
+  "generated_at": "2026-10-03T11:48:08.446113+00:00",
+  "fixture": "Existing Windows SAPI Microsoft Huihui Chinese synthetic WAV; prerecorded, no microphone or playback",
+  "fixture_sha256": "31f91acf42961439bac88f6acf35c584cd773255587f91d28192af19a939805e",
+  "model": "vosk-model-small-cn-0.22",
+  "mode": "actual local Vosk recognizer, ordered 200 ms PCM chunks",
+  "source_sample_rate": 22050,
+  "stream_sample_rate": 16000,
+  "chunks": 21,
+  "partial_revisions": [
+    "去",
+    "去会议室",
+    "去会议室然后",
+    "去会议室然后返回",
+    "去会议室然后返回起点"
+  ],
+  "final": {
+    "ok": true,
+    "session_id": "366a43388e064a8fb821af305a7a51d7",
+    "state": "finished",
+    "provider": "vosk",
+    "partial": "",
+    "text": "去会议室然后返回起点",
+    "is_final": true,
+    "segments": [
+      {
+        "id": "seg001",
+        "text": "去会议室然后返回起点",
+        "revision": 1,
+        "source": "vosk",
+        "corrected": false
+      }
+    ],
+    "corrections": [],
+    "next_sequence": 21,
+    "duration_seconds": 4.052,
+    "simulated": false,
+    "local": true,
+    "requires_confirmation": true
+  },
+  "exact_transcript_match": true,
+  "segment_correction_verified": true,
+  "cancel_discards_and_blocks_finish": true,
+  "runtime_seconds": 1.344,
+  "model_calls_paid": 0,
+  "microphone": false,
+  "speaker": false,
+  "robot_hardware": false,
+  "scope": "One synthetic prerecorded phrase; not microphone, noise, echo cancellation, general ASR accuracy or hardware validation",
+  "reused_in": "4.0.0",
+  "provenance_note": "Actual V3 run retained; V4 keeps recognizer implementation unchanged and reruns software/protocol/browser tests. This JSON does not claim a new actual ASR run.",
+  "v5_provenance": "Prior V4/V3 prerecorded ASR evidence retained; no new physical microphone or speech recognition run in V5."
+}

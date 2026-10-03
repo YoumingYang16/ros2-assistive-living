@@ -1,0 +1,25 @@
+name: ROS software integration
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  jazzy-dds:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build ROS packages
+        run: docker build -t voice-patrol-ros-test .
+      - name: Test Python and actual ROS DDS processes
+        run: |
+          mkdir -p work/ros-test-results
+          docker run --rm -v "$PWD/work/ros-test-results:/ws/test-results" voice-patrol-ros-test \
+            bash /ws/src/robot_voice_patrol/scripts/ros_ci.sh
+      - name: Upload ROS test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ros-dds-test-results
+          path: work/ros-test-results
+          if-no-files-found: warn

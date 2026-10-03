@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "locations": {
+    "home": {
+      "label": "充电点",
+      "aliases": [
+        "基地"
+      ],
+      "x": 0,
+      "y": 0,
+      "yaw": 0
+    },
+    "living_room": {
+      "label": "客厅",
+      "aliases": [
+        "起居室"
+      ],
+      "x": 2,
+      "y": 0,
+      "yaw": 0
+    },
+    "bedroom": {
+      "label": "卧室",
+      "aliases": [
+        "睡房"
+      ],
+      "x": 4,
+      "y": 2,
+      "yaw": 0
+    },
+    "kitchen": {
+      "label": "厨房",
+      "aliases": [],
+      "x": 2,
+      "y": 3,
+      "yaw": 0
+    },
+    "bathroom": {
+      "label": "卫生间",
+      "aliases": [
+        "洗手间",
+        "厕所"
+      ],
+      "x": 0,
+      "y": 3,
+      "yaw": 0
+    },
+    "entry": {
+      "label": "门厅",
+      "aliases": [
+        "玄关"
+      ],
+      "x": 0,
+      "y": 1,
+      "yaw": 0
+    },
+    "study": {
+      "label": "书房",
+      "aliases": [],
+      "x": 4,
+      "y": 0,
+      "yaw": 0
+    },
+    "balcony": {
+      "label": "阳台",
+      "aliases": [],
+      "x": 5,
+      "y": 1,
+      "yaw": 0
+    }
+  },
+  "patrol_routes": {
+    "default": {
+      "label": "居家路线",
+      "waypoints": [
+        "living_room",
+        "bedroom",
+        "kitchen"
+      ],
+      "dwell_seconds": 0.2
+    }
+  },
+  "navigation_timeout": 60.0,
+  "inspection_timeout": 20.0,
+  "max_retries": 1,
+  "object_names": [
+    "空水杯",
+    "密封饮用水",
+    "手机",
+    "遥控器",
+    "纸巾",
+    "毛巾",
+    "眼镜",
+    "书",
+    "钥匙",
+    "人",
+    "椅子",
+    "桌子",
+    "水杯"
+  ],
+  "ros": {
+    "perception_backend": "action",
+    "inspection_action": "/voice_patrol/inspect",
+    "skill_action": "/voice_patrol/execute_skill",
+    "capabilities_service": "/voice_patrol/get_capabilities",
+    "service_discovery_timeout": 5.0,
+    "pose_stale_seconds": 5.0,
+    "navigation_action": "/navigate_to_pose",
+    "map_frame": "map",
+    "pose_topic": "/amcl_pose",
+    "inspection_request_topic": "/voice_patrol/inspection/request",
+    "inspection_result_topic": "/voice_patrol/inspection/result",
+    "cancel_timeout": 2.0
+  },
+  "mock": {
+    "travel_seconds": 0.15,
+    "inspection_seconds": 0.05,
+    "objects": {
+      "home": [],
+      "living_room": [
+        "手机",
+        "遥控器",
+        "纸巾",
+        "眼镜",
+        "水杯"
+      ],
+      "bedroom": [
+        "毛巾"
+      ],
+      "kitchen": [
+        "空水杯",
+        "密封饮用水"
+      ],
+      "bathroom": [],
+      "entry": [
+        "钥匙"
+      ],
+      "study": [
+        "书"
+      ],
+      "balcony": []
+    }
+  }
+}

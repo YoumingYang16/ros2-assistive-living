@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "name": "状态超时备用处理",
+  "steps": [
+    {"type": "step", "id": "ready", "kind": "wait_state", "timeout": 0.2, "on_failure": "continue", "params": {"field": "external_demo_ready", "operator": "eq", "value": true, "poll_seconds": 0.05}},
+    {"type": "if", "condition": {"any": [{"step_id": "ready", "outcome": "timed_out"}, {"step_id": "ready", "outcome": "failed"}]}, "then": [
+      {"type": "step", "kind": "speak", "params": {"text": "接口状态尚未就绪，已进入备用报告流程。"}},
+      {"type": "step", "kind": "report", "params": {"title": "状态等待未完成"}}
+    ], "else": [
+      {"type": "step", "kind": "report", "params": {"title": "接口已就绪"}}
+    ]}
+  ]
+}

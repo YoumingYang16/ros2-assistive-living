@@ -1,0 +1,15 @@
+include README.md LICENSE package.xml setup.cfg
+recursive-include config *.json
+recursive-include launch *.py
+recursive-include robot_voice_patrol/web *.html *.css *.js
+recursive-include docs *.md *.json *.png
+recursive-include tests *.py *.cjs
+recursive-include examples *.py *.json
+include requirements-voice.txt start_mock.cmd start_mock.ps1
+include Dockerfile compose.yaml .dockerignore
+recursive-include schemas *.json
+recursive-include evals *.py *.json
+recursive-include ros2_ws *.xml *.txt *.msg *.action *.srv
+recursive-include tests_ros *.py *.ini
+recursive-include scripts *.sh *.py
+recursive-include .github *.yml *.yaml

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171e29">
+  <title>行知 V6 · 居家生活辅助</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/workspace.css">
+  <link rel="stylesheet" href="/scenarios.css">
+  <link rel="stylesheet" href="/assistive.css">
+  <script src="/voice.js" defer></script>
+  <script src="/streaming-voice.js" defer></script>
+  <script src="/app.js" defer></script>
+  <script src="/workspace.js" defer></script>
+  <script src="/scenarios.js" defer></script>
+  <script src="/assistive.js" defer></script>
+  <script src="/living.js" defer></script>
+  <script src="daily-management.js" defer></script>
+</head>
+<body>
+  <svg class="symbol-library" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M5 7v7a4 4 0 0 0 4 4h3m7-1V10a4 4 0 0 0-4-4h-3"/></symbol>
+    <symbol id="i-command" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m7 9 3 3-3 3m6 0h4"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4L12 3Z"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></symbol>
+  </defs></svg>
+  <aside class="sidebar">
+    <a class="brand" href="#console" aria-label="行知控制台"><span class="brand-mark"><svg><use href="#i-route"/></svg></span><span>行知<span class="brand-en">VOICE PATROL</span></span></a>
+    <div class="sidebar-label">工作空间</div>
+    <a class="nav-link" href="#assistive" data-view="assistive" aria-label="生活辅助"><svg><use href="#i-spark"/></svg>生活辅助</a>
+    <a class="nav-link active" href="#mission" data-view="mission" aria-label="任务控制台"><svg><use href="#i-command"/></svg>任务控制台<span class="nav-dot"></span></a>
+    <a class="nav-link" href="#history" data-view="history" aria-label="任务档案"><svg><use href="#i-route"/></svg>任务档案</a>
+    <a class="nav-link" href="#settings" data-view="settings" aria-label="地点与配置"><svg><use href="#i-spark"/></svg>地点与配置</a>
+    <a class="nav-link" href="#health" data-view="health" aria-label="系统状态"><svg><use href="#i-command"/></svg>系统状态</a>
+    <a class="nav-link" href="#queue" data-view="queue" aria-label="队列与调度"><svg><use href="#i-route"/></svg>队列与调度</a>
+    <a class="nav-link" href="#workflows" data-view="workflows" aria-label="任务编排"><svg><use href="#i-command"/></svg>任务编排</a>
+    <a class="nav-link" href="#memory" data-view="memory" aria-label="观测记忆"><svg><use href="#i-spark"/></svg>观测记忆</a>
+    <a class="nav-link" href="#recovery" data-view="recovery" aria-label="恢复评估"><svg><use href="#i-route"/></svg>恢复评估</a>
+    <a class="nav-link" href="#data" data-view="data" aria-label="数据管理"><svg><use href="#i-command"/></svg>数据管理</a>
+    <a class="nav-link" href="#lifecycle" data-view="lifecycle" aria-label="能力与生命周期"><svg><use href="#i-spark"/></svg>能力与生命周期</a>
+    <div class="sidebar-bottom"><div class="small-orbit"><span></span><span></span><span></span></div><strong>每一步，都有依据。</strong><p>条件任务 · 语音交互<br>持久记录 / ROS 2 接口</p><span class="version">ROS 2 LIVING ASSISTANT / 06</span></div>
+  </aside>
+  <main id="console">
+    <header class="topbar"><div class="breadcrumb">工作空间 <span>/</span> <span id="view-label">任务控制台</span></div><div class="connection"><span id="connection-dot" class="dot"></span><span id="connection-label">正在连接</span><button id="refresh" class="text-button" type="button">刷新</button></div></header>
+    <nav class="mobile-tabs" aria-label="工作台页面"><button type="button" data-view="assistive">生活辅助</button><button type="button" data-view="mission" class="active">任务</button><button type="button" data-view="history">档案</button><button type="button" data-view="settings">配置</button><button type="button" data-view="health">状态</button><button type="button" data-view="queue">队列</button><button type="button" data-view="workflows">编排</button><button type="button" data-view="memory">记忆</button><button type="button" data-view="recovery">恢复</button><button type="button" data-view="data">数据</button><button type="button" data-view="lifecycle">能力</button></nav>
+    <div id="view-mission" class="workspace-view">
+    <section class="page-heading"><div><p class="eyebrow">SPEAK. PLAN. MOVE.</p><h1>把一句话，变成行动<span>。</span></h1><p class="subheading">告诉机器人去哪里，让每一步执行清晰可见。</p></div><div class="mode-pill" id="mode-pill">等待服务</div></section>
+    <div class="summary-strip"><div><span class="stat-label">任务状态</span><strong id="status-label">等待连接</strong></div><div><span class="stat-label">当前位置</span><strong id="location-label">—</strong></div><div><span class="stat-label">本次任务进度</span><strong id="progress-label">尚未开始</strong></div><div><span class="stat-label">运行方式</span><strong id="mode-detail">等待服务响应</strong></div></div>
+    <div id="recovery-banner" class="recovery-banner" hidden></div>
+    <div class="primary-grid">
+      <section class="card command-card" aria-labelledby="command-title"><div class="card-heading"><h2 id="command-title"><span class="section-number">01</span>下达任务</h2><span class="quiet-tag">中文指令</span></div>
+        <label class="input-label" for="command-input">今天，让机器人做什么？</label>
+        <div class="command-input-wrap"><textarea id="command-input" rows="3" maxlength="500" placeholder="例如：去会议室，然后返回起点" spellcheck="false"></textarea><div class="input-footer"><button id="mic-button" class="mic-button" type="button" aria-pressed="false"><svg><use href="#i-mic"/></svg><span id="mic-label">点击说话</span></button><span id="character-count">0 / 500</span></div></div>
+        <p id="voice-hint" class="help-text">语音会先转成可编辑文字，确认后再发送。浏览器识别可能需要联网。</p>
+        <div class="voice-options"><label><input id="handsfree-toggle" type="checkbox">连续语音 · 自动发送</label><span id="voice-live" class="voice-live">麦克风未开启</span></div>
+        <p id="voice-transcript" class="voice-transcript" aria-live="polite" hidden></p>
+        <div class="file-voice"><label class="file-button" for="wav-input">上传 WAV 离线识别<input id="wav-input" type="file" accept=".wav,audio/wav,audio/x-wav"></label><span id="wav-status">本地服务处理 · 最长 60 秒</span></div>
+        <div class="stream-controls"><label for="voice-provider">语音输入</label><select id="voice-provider"><option value="browser">浏览器识别</option><option value="vosk">本地 Vosk 流式识别</option></select><button id="stream-start" type="button" class="button secondary compact" hidden>开始本地收音</button><button id="stream-finish" type="button" class="button secondary compact" hidden>结束并转写</button><button id="stream-cancel" type="button" class="button danger compact" hidden>取消</button><span id="stream-state" class="help-text"></span></div><div id="stream-segments" class="stream-segments" hidden></div>
+        <div class="examples" aria-label="指令示例"><button type="button" data-command="去会议室然后返回起点">会议室往返 <span>↗</span></button><button type="button" data-command="开始巡逻两圈">巡逻两圈 <span>↗</span></button><button type="button" data-command="先去会议室找水杯，没找到就去仓库，找到后告诉我并返回起点">条件查找 <span>↗</span></button></div>
+        <div class="command-actions"><button id="preview-button" class="button secondary" type="button">预览计划</button><button id="send-button" class="button primary" type="button">发送任务<svg><use href="#i-arrow"/></svg></button></div>
+        <div id="feedback" class="feedback" role="status" aria-live="polite">选择一个示例，或输入你的第一条指令。</div>
+        <div id="clarification" class="clarification" hidden><strong>还需要确认一点</strong><p id="clarification-message"></p><div id="clarification-options"></div></div>
+        <div id="plan-preview" class="plan-preview" hidden><div class="preview-title">计划预览 <span>尚未执行</span></div><p id="preview-summary"></p><ol id="preview-steps"></ol></div>
+      </section>
+      <section class="card diagram-card" aria-labelledby="diagram-title"><div class="card-heading"><h2 id="diagram-title"><span class="section-number">02</span>地点与路径</h2><span class="quiet-tag">坐标示意</span></div><div class="diagram-legend"><span><i class="legend-robot"></i>机器人</span><span><i class="legend-location"></i>预设地点</span><span><i class="legend-route"></i>计划顺序</span></div><div class="diagram-canvas"><svg id="location-diagram" viewBox="0 0 600 350" role="img" aria-label="地点坐标与任务顺序示意"></svg><div id="diagram-empty" class="diagram-empty">连接服务后显示预设地点</div></div><div class="diagram-note"><span class="dot"></span><p id="diagram-note">此图为配置坐标示意，不代表真实障碍地图。</p></div><div class="map-footer"><span id="pose-label">位置数据：尚未连接</span><span>FRAME / MAP</span></div></section>
+    </div>
+    <div class="secondary-grid" id="execution">
+      <section class="card execution-card" aria-labelledby="execution-title"><div class="card-heading"><h2 id="execution-title"><span class="section-number">03</span>执行与反馈</h2><span id="mission-id" class="quiet-tag">无活动任务</span></div><div class="mission-title-row"><p id="mission-summary">下一段旅程，从一句指令开始。</p><span id="mission-state" class="mission-state">就绪</span></div><div class="progress-track" role="progressbar" id="progress-track" aria-label="任务完成进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-fill"></span></div><ol id="timeline" class="timeline"><li class="timeline-empty">任务开始后，这里会逐步展示导航、等待和检查结果。</li></ol><div id="mission-report" class="mission-report" hidden></div><div class="execution-controls"><button id="pause-button" class="button secondary compact" type="button" disabled>暂停任务</button><button id="stop-button" class="button danger compact" type="button" disabled><svg><use href="#i-stop"/></svg>停止任务</button><label class="speech-toggle"><input id="speech-toggle" type="checkbox"><span>语音播报反馈</span></label></div><p class="help-text control-note">停止按钮会请求取消软件任务；它不代替实体机器人的硬件急停。</p></section>
+      <section class="card activity-card" aria-labelledby="activity-title"><div class="card-heading"><h2 id="activity-title">运行记录</h2><span class="live-label"><span class="dot"></span>LIVE</span></div><div id="event-list" class="event-list" aria-live="off"><p class="empty-log">连接后显示任务事件。</p></div></section>
+    </div>
+    <section class="guide" id="guide"><div><p class="eyebrow">BUILT TO BE EXPLICIT</p><h2>理解意图，依据观测。</h2><p id="planner-note">使用受约束的技能计划。地点不明确时先澄清；条件分支根据实际观测决定执行或跳过。</p></div><div class="guide-commands"><div><span>导航与返回</span><code>去会议室然后返回起点</code></div><div><span>巡逻</span><code>开始巡逻两圈</code></div><div><span>条件任务</span><code>如果没找到，就去下一个地点</code></div><div><span>即时控制</span><code>暂停 / 继续 / 停止</code></div></div><p id="capability-note" class="capability-note">软件模拟可展示任务流程；真实导航和识别需要对应 ROS 2 服务。</p></section>
+    </div>
+    <section id="view-history" class="workspace-view" hidden><div class="page-heading"><div><p class="eyebrow">EVERY MISSION, REMEMBERED.</p><h1>任务有始末，观察有来源<span>。</span></h1><p class="subheading">查看持久化任务记录、条件执行结果和观测证据。</p></div><button id="history-refresh" class="button secondary" type="button">刷新档案</button></div><div class="history-layout"><section class="card"><div class="card-heading"><h2>最近任务</h2><span id="history-count" class="quiet-tag">—</span></div><div id="history-list" class="history-list"><p class="empty-log">加载任务档案…</p></div></section><section class="card history-detail"><div class="card-heading"><h2>任务详情</h2><a id="history-export" class="button secondary compact" hidden>导出 JSON</a></div><div id="history-detail"><p class="empty-log">选择一条任务，查看完整计划与执行结果。</p></div></section></div></section>
+    <section id="view-settings" class="workspace-view" hidden><div class="page-heading"><div><p class="eyebrow">A WORKSPACE THAT FITS.</p><h1>让地点和路线，贴合你的场景<span>。</span></h1><p class="subheading">编辑完整配置，保存时由服务校验。任务执行期间不能修改。</p></div><span id="config-status" class="mode-pill">尚未加载</span></div><div class="settings-layout"><section class="card"><div class="card-heading"><h2>配置编辑器</h2><button id="config-reload" class="text-button" type="button">重新加载</button></div><label class="input-label" for="config-editor">配置 JSON</label><textarea id="config-editor" class="json-editor" spellcheck="false" rows="23" aria-describedby="config-help"></textarea><p id="config-help" class="help-text">可编辑 locations 中的地点坐标、标签与别名，以及 routes 中的巡逻顺序。密钥不在这里填写或保存。</p><div class="command-actions"><button id="config-format" class="button secondary" type="button">格式化 JSON</button><button id="config-save" class="button primary" type="button">校验并保存配置</button></div><p id="config-feedback" class="feedback" role="status"></p></section><section class="card config-overview"><div class="card-heading"><h2>场景概览</h2><span id="config-location-count" class="quiet-tag">0 个地点</span></div><div id="config-locations"></div><h3>巡逻路线</h3><div id="config-routes"></div><div class="settings-note"><strong>保存后的变化</strong><p>新的任务使用更新后的地点和路线；已保存的历史任务保留原有计划。修改坐标不会改变真实环境。</p></div></section></div></section>
+    <section id="view-health" class="workspace-view" hidden><div class="page-heading"><div><p class="eyebrow">KNOW WHAT IS RUNNING.</p><h1>系统状态，随时可见<span>。</span></h1><p class="subheading">区分软件模拟、真实接口和未接入能力。</p></div><button id="health-refresh" class="button secondary" type="button">刷新状态</button></div><div id="health-summary" class="health-grid"></div><div class="health-details-grid"><section class="card"><div class="card-heading"><h2>运行诊断</h2></div><dl id="health-details" class="diagnostic-list"></dl></section><section class="card"><div class="card-heading"><h2>任务指标</h2></div><div id="metrics-grid" class="metrics-grid"></div><p class="help-text">指标来自本地任务记录，不代表实机可靠性认证。</p></section></div></section>
+    <footer class="page-footer"><span>行知 · ROS 2 语音巡逻台</span><span>明确的任务 · 可见的状态 · 可复现的流程</span></footer>
+  </main>
+</body>
+</html>
+

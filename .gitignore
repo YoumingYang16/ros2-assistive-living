@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+.venv/
+.runtime/
+build/
+dist/
+install/
+log/
+*.egg-info/
+.pytest_cache/
+models/
+
+# Local work, personal records and credentials are never publication inputs.
+work/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3*
+*.db
+*.db-wal
+*.db-shm
+*.pem
+*.key
+credentials.json
+secrets.json

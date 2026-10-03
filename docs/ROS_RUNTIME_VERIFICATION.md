@@ -1,5 +1,7 @@
 # ROS 运行时验证记录
 
+GitHub 发布补充：本页下文记录最初 Windows 本地开发环境的限制。发布后已在 GitHub Actions 的 Ubuntu 24.04 / ROS 2 Jazzy 容器中实际构建 ROS 包并执行原生 DDS 进程测试，结果见[对应工作流](https://github.com/YoumingYang16/ros2-assistive-living/actions/workflows/ros-integration.yml)。CI 使用软件 Action 服务端，未连接硬件；其结果与下文 Windows 本地探针分开记录，不将旧日志改写为成功。GitHub 后续修复包含 ROS 环境脚本的 nounset 兼容、固定浮点数组的 JSON 标准化，以及测试发令前等待 DDS 就绪。
+
 记录日期：2026-10-03（Asia/Hong_Kong）。本次开发机为 Windows，没有机器人硬件测试。下述下载与原生运行时探针发生在 V2 开发期间；V3 没有重复下载，也未尝试绕过同一系统限制。
 
 ## 已执行

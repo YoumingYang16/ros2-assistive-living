@@ -78,7 +78,15 @@ class TestDDSWorkflow(unittest.TestCase):
         self.subscription = self.node.create_subscription(String, "/voice_patrol/state", self.on_state, 10)
         self.publisher = self.node.create_publisher(String, "/voice_patrol/command", 10)
         self.params = AsyncParameterClient(self.node, "voice_patrol_software_fixture")
-        self.wait_for(lambda: self.state is not None and self.publisher.get_subscription_count() > 0, 20)
+        self.wait_for(self.ready_for_commands, 20)
+
+    def ready_for_commands(self):
+        if self.state is None or self.publisher.get_subscription_count() == 0:
+            return False
+        health = self.state.get("robot", {}).get("health", {})
+        return (self.state.get("lifecycle", {}).get("state") == "active"
+                and all(health.get(key) for key in
+                        ("navigation_ready", "inspection_ready", "pose_valid")))
 
     def tearDown(self):
         self.node.destroy_node()
@@ -112,7 +120,7 @@ class TestDDSWorkflow(unittest.TestCase):
         self.configure(inspection_outcome="", sensor_available=True)
         self.command("去会议室检查有没有水杯，然后返回起点")
         state = self.terminal()
-        self.assertEqual(state["state"], "succeeded")
+        self.assertEqual(state["state"], "succeeded", state.get("mission"))
         observation = next(r for r in state["mission"]["results"] if r["kind"] == "inspect")
         self.assertEqual(observation["outcome"], "found")
         self.assertEqual(observation["source"], "ros2_inspection_action")
@@ -123,7 +131,7 @@ class TestDDSWorkflow(unittest.TestCase):
         self.configure(inspection_outcome="inconclusive")
         self.command("去会议室检查有没有水杯")
         state = self.terminal()
-        self.assertEqual(state["state"], "succeeded")
+        self.assertEqual(state["state"], "succeeded", state.get("mission"))
         observation = next(r for r in state["mission"]["results"] if r["kind"] == "inspect")
         self.assertEqual(observation["outcome"], "inconclusive")
         self.assertIsNone(observation["found"])

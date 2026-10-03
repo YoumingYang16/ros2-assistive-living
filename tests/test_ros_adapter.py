@@ -2,6 +2,7 @@
 from concurrent.futures import Future
 from collections import Counter
 from datetime import datetime, timezone
+from decimal import Decimal
 import json
 import threading
 import time
@@ -152,6 +153,60 @@ class RosAdapterTests(unittest.TestCase):
         result = MissionEngine._normalize_result(step, response["result"])
         self.assertEqual(result["outcome"], "observed")
         self.assertIsNone(result["found"])
+
+    def test_typed_bbox_numeric_scalars_survive_engine_json_serialization(self):
+        # ROS float32[4] arrays contain non-native numeric scalars. Decimal
+        # exercises the same conversion boundary without a NumPy dependency.
+        coordinates = [Decimal("1.25"), Decimal("-2.5"), Decimal("3.75"), Decimal("0")]
+        with self.assertRaises(TypeError):
+            json.dumps(coordinates)
+        for outcome, expected in ((1, "found"), (3, "inconclusive")):
+            with self.subTest(outcome=expected):
+                adapter = self.typed_fixture()
+                step = Step("inspect", "home", object_name="水杯", timeout=2, step_id="s001")
+                thread, response = run_step(adapter, step)
+                wait_until(lambda: adapter._inspection_client.sent)
+                goal, future = adapter._inspection_client.sent[0]
+                handle = FakeHandle()
+                future.set_result(handle)
+                result = self.typed_result(goal, outcome=outcome)
+                result.observations[0].bbox_xywh = list(coordinates)
+                handle.finish(result=result)
+                thread.join(1)
+                self.assertFalse(thread.is_alive())
+                self.assertNotIn("error", response)
+                normalized = MissionEngine._normalize_result(step, response["result"])
+                bbox = normalized["evidence"][0]["bbox_xywh"]
+                self.assertTrue(all(type(value) is float for value in bbox))
+                self.assertEqual(bbox, [1.25, -2.5, 3.75, 0.0])
+                restored = json.loads(json.dumps(normalized, allow_nan=False))
+                self.assertEqual(restored["evidence"][0]["bbox_xywh"], bbox)
+                self.assertEqual(restored["outcome"], expected)
+
+    def test_typed_bbox_scalar_conversion_still_rejects_invalid_geometry(self):
+        for coordinates in (
+            [Decimal("NaN"), Decimal("0"), Decimal("1"), Decimal("1")],
+            [Decimal("0"), Decimal("0"), Decimal("Infinity"), Decimal("1")],
+            [Decimal("0"), Decimal("0"), Decimal("-1"), Decimal("1")],
+            [Decimal("0"), Decimal("0"), Decimal("1"), Decimal("-1")],
+        ):
+            with self.subTest(coordinates=coordinates):
+                adapter = self.typed_fixture()
+                step = Step("inspect", "home", object_name="水杯", timeout=2)
+                thread, response = run_step(adapter, step)
+                wait_until(lambda: adapter._inspection_client.sent)
+                goal, future = adapter._inspection_client.sent[0]
+                handle = FakeHandle()
+                future.set_result(handle)
+                result = self.typed_result(goal)
+                result.observations[0].bbox_xywh = coordinates
+                handle.finish(result=result)
+                thread.join(1)
+                self.assertFalse(thread.is_alive())
+                self.assertNotIn("result", response)
+                self.assertIsInstance(response["error"], RosExecutionError)
+                self.assertEqual(response["error"].code, "INVALID_OBSERVATION")
+                self.assertFalse(response["error"].retryable)
 
     def test_typed_inspection_can_be_cancelled_with_terminal_ack(self):
         adapter = self.typed_fixture()

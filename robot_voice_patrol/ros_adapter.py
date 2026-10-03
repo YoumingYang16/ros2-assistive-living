@@ -585,7 +585,9 @@ class Ros2Adapter:
             evidence = []
             for observation in result.observations:
                 confidence = float(observation.confidence)
-                bounds = list(observation.bbox_xywh)
+                # rosidl fixed float arrays may yield NumPy scalars. Persist
+                # ordinary Python numbers so successful evidence stays JSON-safe.
+                bounds = [float(value) for value in observation.bbox_xywh]
                 if (not math.isfinite(confidence) or not 0 <= confidence <= 1 or len(bounds) != 4 or
                     not all(math.isfinite(v) for v in bounds) or bounds[2] < 0 or bounds[3] < 0):
                     raise ValueError("invalid confidence/bounding box")
